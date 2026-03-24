@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Commercial Kitchen Extraction Cleaning — Fan Rescue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Montserrat', sans-serif; color: #1b2a3b; line-height: 1.7; font-size: 16px; background: #f4f6f8; margin: 0; }
+a { color: #C9A84C; text-decoration: none; }
+
+/* ── TOPBAR ── */
+.fr-topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #192840; border-bottom: 2px solid #C9A84C; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+.fr-topbar__actions { display: flex; gap: 10px; align-items: center; }
+.fr-topbar__btn { display: inline-flex; align-items: center; gap: 6px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 8px 18px; border-radius: 2px; cursor: pointer; border: none; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+.fr-topbar__btn:hover { transform: translateY(-1px); }
+.fr-topbar__btn--cta { background: #C9A84C; color: #fff; }
+.fr-topbar__btn--cta:hover { background: #b8943f; }
+.fr-topbar__btn--call { background: rgba(255,255,255,0.1); color: #fff; }
+.fr-topbar__btn--call:hover { background: rgba(255,255,255,0.18); }
+.fr-topbar__btn svg { width: 14px; height: 14px; }
+
+/* ── PAGE ── */
+.fr-page { max-width: 960px; margin: 56px auto 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.fr-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+.fr-section { padding: 72px 0; }
+.fr-section--grey { background: #f4f6f8; }
+.fr-section--dark { background: #192840; color: #fff; }
+
+/* ── HERO ── */
+.fr-hero { background: linear-gradient(135deg, #0d1928 0%, #112035 45%, #192840 100%); color: #fff; padding: 100px 24px 80px; position: relative; overflow: hidden; }
+.fr-hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 65%); border-radius: 50%; }
+.fr-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #C9A84C, transparent); }
+.fr-hero__inner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
+.fr-hero__badge { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: #C9A84C; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 2px; margin-bottom: 28px; }
+.fr-hero__title { font-family: 'Bitter', sans-serif; font-size: clamp(34px, 5.5vw, 56px); line-height: 1.08; color: #fff; margin-bottom: 20px; letter-spacing: -0.5px; }
+.fr-hero__title span { color: #C9A84C; }
+.fr-hero__subtitle { font-size: 17px; color: rgba(255,255,255,0.72); max-width: 600px; line-height: 1.65; margin-bottom: 40px; }
+
+/* ── STATS BAR ── */
+.fr-stats-bar { display: flex; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0; }
+.fr-stats-bar .fr-stat { flex: 1; text-align: center; padding: 28px 16px; border-right: 1px solid rgba(255,255,255,0.08); }
+.fr-stats-bar .fr-stat:last-child { border-right: none; }
+.fr-stat__number { font-family: 'Bitter', sans-serif; font-size: 36px; color: #C9A84C; line-height: 1; margin-bottom: 6px; }
+.fr-stat__label { font-size: 12px; color: rgba(255,255,255,0.55); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+
+/* ── TYPOGRAPHY ── */
+.fr-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; margin-bottom: 12px; }
+.fr-h2 { font-family: 'Bitter', sans-serif; font-size: clamp(26px, 4vw, 42px); line-height: 1.1; color: #192840; margin-bottom: 20px; }
+.fr-section--dark .fr-h2 { color: #fff; }
+.fr-lead { font-size: 17px; color: #3d5166; line-height: 1.75; margin-bottom: 24px; }
+.fr-section--dark .fr-lead { color: rgba(255,255,255,0.72); }
+.fr-divider { width: 48px; height: 3px; background: #C9A84C; margin-bottom: 24px; border-radius: 2px; }
+
+/* ── CHALLENGE CARDS ── */
+.fr-challenge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; }
+.fr-challenge-card { background: #fff; border: 1px solid #e5eaf0; border-left: 4px solid #C9A84C; border-radius: 0 4px 4px 0; padding: 24px 28px; }
+.fr-challenge-card h3 { font-family: 'Bitter', sans-serif; font-size: 17px; color: #192840; margin-bottom: 8px; }
+.fr-challenge-card p { font-size: 14px; color: #3d5166; margin: 0; line-height: 1.6; }
+.fr-stat-callout { grid-column: 1 / -1; background: linear-gradient(135deg, #192840 0%, #1e3050 100%); border-radius: 4px; padding: 40px; text-align: center; }
+.fr-stat-callout__number { font-family: 'Bitter', sans-serif; font-size: 72px; color: #C9A84C; line-height: 1; }
+.fr-stat-callout__text { font-size: 16px; color: rgba(255,255,255,0.7); margin-top: 8px; line-height: 1.5; }
+.fr-stat-callout__source { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 12px; font-style: italic; }
+
+/* ── CERT BADGES ── */
+.fr-certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 36px; }
+.fr-cert-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 24px; display: flex; gap: 16px; align-items: flex-start; }
+.fr-cert-icon { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; flex-shrink: 0; }
+.fr-cert-card h3 { font-size: 15px; color: #C9A84C; margin-bottom: 4px; font-weight: 700; }
+.fr-cert-card p { font-size: 13px; color: rgba(255,255,255,0.65); margin: 0; line-height: 1.5; }
+
+/* ── SERVICE COLUMNS ── */
+.fr-service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 36px; }
+.fr-service-col { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 32px 28px; }
+.fr-service-col h3 { font-family: 'Bitter', sans-serif; font-size: 20px; color: #C9A84C; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid rgba(201,168,76,0.3); }
+.fr-service-col ul { list-style: none; }
+.fr-service-col li { font-size: 14px; color: rgba(255,255,255,0.75); padding: 8px 0; display: flex; gap: 10px; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.fr-service-col li:last-child { border-bottom: none; }
+.fr-service-col li::before { content: '✓'; color: #C9A84C; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+
+/* ── WHY US CARDS ── */
+.fr-why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 36px; }
+.fr-why-card { background: #fff; border: 1px solid #e5eaf0; border-radius: 4px; padding: 28px 24px; }
+.fr-why-card__icon { width: 44px; height: 44px; background: rgba(201,168,76,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.fr-why-card h3 { font-family: 'Bitter', sans-serif; font-size: 16px; color: #192840; margin-bottom: 8px; }
+.fr-why-card p { font-size: 14px; color: #3d5166; margin: 0; line-height: 1.6; }
+
+/* ── CAPABILITY GRID ── */
+.fr-cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
+.fr-cap-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 28px 20px; text-align: center; }
+.fr-cap-card__icon { font-size: 28px; margin-bottom: 12px; }
+.fr-cap-card h3 { font-size: 15px; color: #C9A84C; margin-bottom: 8px; font-weight: 700; }
+.fr-cap-card p { font-size: 13px; color: rgba(255,255,255,0.65); margin: 0; line-height: 1.5; }
+
+/* ── CTA ── */
+.fr-cta { text-align: center; padding: 80px 24px; background: linear-gradient(135deg, #112035 0%, #142238 100%); color: #fff; }
+.fr-cta h2 { font-family: 'Bitter', sans-serif; font-size: clamp(28px, 4vw, 48px); color: #fff; margin-bottom: 16px; }
+.fr-cta p { color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 36px; font-size: 17px; }
+.fr-cta__contact { margin-top: 32px; display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
+.fr-cta__contact-item { font-size: 15px; color: rgba(255,255,255,0.8); display: flex; align-items: center; gap: 8px; }
+.fr-cta__contact-item svg { width: 18px; height: 18px; color: #C9A84C; }
+.fr-btn { display: inline-block; background: #C9A84C; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 16px 36px; border-radius: 2px; text-decoration: none; margin: 0 8px 12px; transition: background 0.2s, transform 0.15s; border: none; cursor: pointer; }
+.fr-btn:hover { background: #b8943f; transform: translateY(-1px); }
+.fr-btn--outline { background: transparent; border: 2px solid rgba(255,255,255,0.4); color: #fff; }
+.fr-btn--outline:hover { border-color: #C9A84C; }
+
+/* ── FOOTER ── */
+.fr-footer { background: #0d1928; padding: 32px 24px; text-align: center; }
+.fr-footer p { color: rgba(255,255,255,0.35); font-size: 12px; margin: 0; }
+.fr-footer__brand { font-family: 'Bitter', sans-serif; font-size: 20px; color: #C9A84C; letter-spacing: 1px; margin-bottom: 8px; }
+
+/* ── WHY US CHECKLIST ── */
+.fr-checklist { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin-top: 24px; }
+.fr-checklist li { font-size: 14px; color: rgba(255,255,255,0.75); display: flex; gap: 8px; align-items: flex-start; padding: 6px 0; }
+.fr-checklist li::before { content: '✓'; color: #C9A84C; font-weight: 800; flex-shrink: 0; }
+
+@media (max-width: 700px) {
+  .fr-challenge-grid, .fr-service-grid { grid-template-columns: 1fr; }
+  .fr-cap-grid { grid-template-columns: 1fr; }
+  .fr-checklist { grid-template-columns: 1fr; }
+  .fr-stats-bar { flex-direction: column; }
+  .fr-stats-bar .fr-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 20px 16px; }
+  .fr-stat-callout__number { font-size: 52px; }
+  .fr-cta__contact { flex-direction: column; align-items: center; }
+}
+
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+  .fr-topbar { display: none !important; }
+  .fr-page { margin: 0; box-shadow: none; max-width: 100%; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ TOPBAR ══ -->
+<div class="fr-topbar" id="topbar">
+  <div>
+    <div style="font-family:'Bitter',sans-serif;font-size:18px;color:#C9A84C;letter-spacing:1px;font-weight:700;line-height:1.1;">FAN RESCUE</div>
+    <div style="font-size:10px;color:rgba(255,255,255,0.45);letter-spacing:0.5px;margin-top:2px;">Commercial Kitchen Extraction &amp; HVAC Systems · BESA Certified Since 2018</div>
+  </div>
+  <div class="fr-topbar__actions">
+    <a href="tel:+442033082936" class="fr-topbar__btn fr-topbar__btn--call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      020 3308 2936
+    </a>
+    <button class="fr-topbar__btn fr-topbar__btn--cta" onclick="getQuote()">Get a Quote</button>
+  </div>
+</div>
+
+<div class="fr-page">
+
+<!-- ══════════ 1. HERO ══════════ -->
+<div class="fr-hero">
+  <div class="fr-hero__inner">
+    <div class="fr-hero__badge">BESA Certified · F-Gas Registered · TR/19 Compliant</div>
+    <h1 class="fr-hero__title">Commercial Kitchen<br><span>Extraction Cleaning</span></h1>
+    <p class="fr-hero__subtitle">Bespoke deep cleaning, compliance certification and tailored service management for London and the South East.</p>
+    <button class="fr-btn" onclick="getQuote()" style="color:#fff;">Get a Bespoke Quote</button>
+    <a href="tel:+442033082936" class="fr-btn fr-btn--outline">Call Us — 020 3308 2936</a>
+  </div>
+</div>
+
+<!-- ── STATS BAR ── -->
+<div style="background:#192840;">
+  <div class="fr-stats-bar" style="max-width:900px;margin:0 auto;">
+    <div class="fr-stat"><div class="fr-stat__number">95%</div><div class="fr-stat__label">On-Site Arrival Rate</div></div>
+    <div class="fr-stat"><div class="fr-stat__number">24/7</div><div class="fr-stat__label">Emergency Call-Out</div></div>
+    <div class="fr-stat"><div class="fr-stat__number">500+</div><div class="fr-stat__label">Kitchens Serviced</div></div>
+    <div class="fr-stat"><div class="fr-stat__number">2005</div><div class="fr-stat__label">Established</div></div>
+  </div>
+</div>
+
+<!-- ══════════ 2. THE CHALLENGE ══════════ -->
+<div class="fr-section">
+  <div class="fr-container">
+    <div class="fr-label">The Challenge</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Why Extraction Cleaning Can't Be an Afterthought</h2>
+    <p class="fr-lead">Grease accumulation in ductwork is a compliance, insurance, and fire risk. Most operators don't know there's a problem until an EHO visit or a claim is rejected.</p>
+
+    <div class="fr-challenge-grid">
+      <div class="fr-challenge-card">
+        <h3>🔥 Fire Risk</h3>
+        <p>Grease buildup in ductwork is the leading cause of commercial kitchen fires. A single blockage can ignite from cooking temperatures.</p>
+      </div>
+      <div class="fr-challenge-card">
+        <h3>📋 Compliance Gaps</h3>
+        <p>EHOs and insurers require documented proof of regular cleaning. Without TR19 certificates, your insurance cover could be void.</p>
+      </div>
+      <div class="fr-challenge-card">
+        <h3>⏰ Operational Disruption</h3>
+        <p>Poor scheduling means cleaning happens at the wrong time — or not at all. You need a provider that works around your service, not against it.</p>
+      </div>
+      <div class="fr-challenge-card">
+        <h3>📈 Rising Standards</h3>
+        <p>BSI 15780 and TR/19 grease micron testing are now the benchmark. Operators who don't meet them risk enforcement action.</p>
+      </div>
+      <div class="fr-stat-callout">
+        <div class="fr-stat-callout__number">61%</div>
+        <div class="fr-stat-callout__text">of commercial kitchen fires are caused by<br>grease buildup in extraction systems</div>
+        <div class="fr-stat-callout__source">Source: London Fire Brigade</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 3. CREDENTIALS ══════════ -->
+<div class="fr-section fr-section--dark">
+  <div class="fr-container">
+    <div class="fr-label">Credentials</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Certified Expertise You Can Trust</h2>
+
+    <div class="fr-certs">
+      <div class="fr-cert-card">
+        <div class="fr-cert-icon" style="background:rgba(201,168,76,0.2);color:#C9A84C;">B</div>
+        <div>
+          <h3>BESA Certified</h3>
+          <p>Heating &amp; Ventilation Contractors Association — HV020676. <a href="https://www.thebesa.com/HV020676/" style="color:#C9A84C;">Verify →</a></p>
+        </div>
+      </div>
+      <div class="fr-cert-card">
+        <div class="fr-cert-icon" style="background:rgba(76,175,80,0.2);color:#4CAF50;">F</div>
+        <div>
+          <h3>F-Gas Registered</h3>
+          <p>Fully registered for refrigerant gas handling — FGAS2001890.</p>
+        </div>
+      </div>
+      <div class="fr-cert-card">
+        <div class="fr-cert-icon" style="background:rgba(201,168,76,0.2);color:#C9A84C;">✓</div>
+        <div>
+          <h3>TR/19 Compliant</h3>
+          <p>All cleaning to HVCA TR/19 with grease micron testing (&lt;25μm).</p>
+        </div>
+      </div>
+      <div class="fr-cert-card">
+        <div class="fr-cert-icon" style="background:rgba(99,179,237,0.2);color:#63B3ED;">📷</div>
+        <div>
+          <h3>Full Documentation</h3>
+          <p>Before/after photography, micron readings &amp; compliance certificates.</p>
+        </div>
+      </div>
+      <div class="fr-cert-card">
+        <div class="fr-cert-icon" style="background:rgba(201,168,76,0.2);color:#C9A84C;">★</div>
+        <div>
+          <h3>Proven Track Record</h3>
+          <p>500+ kitchens across hospitality, schools, healthcare &amp; multi-site.</p>
+        </div>
+      </div>
+      <div class="fr-cert-card">
+        <div class="fr-cert-icon" style="background:rgba(99,179,237,0.2);color:#63B3ED;">£</div>
+        <div>
+          <h3>Competitive Pricing</h3>
+          <p>Transparent, bespoke pricing with multi-site discounts. No hidden fees.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 4. WHAT'S INCLUDED ══════════ -->
+<div class="fr-section fr-section--dark" style="background:linear-gradient(135deg,#0d1928 0%,#152035 100%);">
+  <div class="fr-container">
+    <div class="fr-label">The Service</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">What's Included</h2>
+
+    <div class="fr-service-grid">
+      <div class="fr-service-col">
+        <h3>🔧 Technical Deep Clean</h3>
+        <ul>
+          <li>Canopy &amp; plenum deep clean</li>
+          <li>Full ductwork cleaning (canopy to discharge)</li>
+          <li>Fan unit strip-down, clean &amp; maintenance</li>
+          <li>Grease micron testing (target: &lt;25μm)</li>
+          <li>Filter cleaning or replacement</li>
+          <li>Compliance certification with photography</li>
+          <li>Before &amp; after photographic report</li>
+        </ul>
+      </div>
+      <div class="fr-service-col">
+        <h3>👤 Managed Service</h3>
+        <ul>
+          <li>Dedicated account manager — your single contact</li>
+          <li>State-of-the-art AI scheduling system</li>
+          <li>Proactive 4-stage reminder system</li>
+          <li>Industry-specific flexible scheduling</li>
+          <li>Emergency rescheduling (2-hour notice)</li>
+          <li>Comprehensive EHO-compliant reporting</li>
+          <li>Direct mobile access to your coordinator</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 5. WHY FAN RESCUE ══════════ -->
+<div class="fr-section">
+  <div class="fr-container">
+    <div class="fr-label">Why Fan Rescue</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Built for Busy Kitchens</h2>
+    <p class="fr-lead">We don't just clean extraction systems — we manage the entire process so you never have to think about it.</p>
+
+    <div class="fr-why-grid">
+      <div class="fr-why-card">
+        <div class="fr-why-card__icon">👤</div>
+        <h3>Dedicated Account Manager</h3>
+        <p>A single named contact who knows your sites and schedule. No call centres, no runaround.</p>
+      </div>
+      <div class="fr-why-card">
+        <div class="fr-why-card__icon">🤖</div>
+        <h3>AI-Powered Scheduling</h3>
+        <p>State-of-the-art system that proactively manages your calendar and sends reminders before each visit.</p>
+      </div>
+      <div class="fr-why-card">
+        <div class="fr-why-card__icon">🚛</div>
+        <h3>95% On-Site Arrival</h3>
+        <p>Industry-leading reliability. When we book it, we show up. No last-minute cancellations.</p>
+      </div>
+      <div class="fr-why-card">
+        <div class="fr-why-card__icon">£</div>
+        <h3>Competitive &amp; Transparent</h3>
+        <p>Bespoke pricing with multi-site discounts. No hidden charges, no surprises on the invoice.</p>
+      </div>
+      <div class="fr-why-card">
+        <div class="fr-why-card__icon">⚙️</div>
+        <h3>Tailored to Your Operation</h3>
+        <p>Evening, weekend, holiday or split-session — we fit around you, not the other way around.</p>
+      </div>
+      <div class="fr-why-card">
+        <div class="fr-why-card__icon">📋</div>
+        <h3>EHO-Compliant Reports</h3>
+        <p>Comprehensive compliance reports with photography and micron results issued on receipt of payment.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 6. FULL CAPABILITY ══════════ -->
+<div class="fr-section fr-section--dark">
+  <div class="fr-container">
+    <div class="fr-label">Full Capability</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">More Than Just Extraction Cleaning</h2>
+    <p class="fr-lead">Fan Rescue is a full-service mechanical engineering firm. Whatever your kitchen or building needs, we handle it in-house.</p>
+
+    <div class="fr-cap-grid">
+      <div class="fr-cap-card">
+        <div class="fr-cap-card__icon">🌀</div>
+        <h3>Extraction &amp; Ventilation</h3>
+        <p>Full system design, installation &amp; maintenance.</p>
+      </div>
+      <div class="fr-cap-card">
+        <div class="fr-cap-card__icon">⚡</div>
+        <h3>Emergency Fan Repairs</h3>
+        <p>24/7 rapid response for urgent breakdowns.</p>
+      </div>
+      <div class="fr-cap-card">
+        <div class="fr-cap-card__icon">❄️</div>
+        <h3>Air Conditioning</h3>
+        <p>Commercial AC install, maintenance &amp; chilled water.</p>
+      </div>
+      <div class="fr-cap-card">
+        <div class="fr-cap-card__icon">🔧</div>
+        <h3>Kitchen Installations</h3>
+        <p>Complete setup from design to regulatory sign-off.</p>
+      </div>
+      <div class="fr-cap-card">
+        <div class="fr-cap-card__icon">📐</div>
+        <h3>HVAC Design</h3>
+        <p>Custom system design tailored to your space.</p>
+      </div>
+      <div class="fr-cap-card">
+        <div class="fr-cap-card__icon">🛡️</div>
+        <h3>Maintenance Contracts</h3>
+        <p>Preventive programmes for peak performance.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 7. CTA ══════════ -->
+<div class="fr-cta">
+  <h2>Ready to Protect Your Kitchen?</h2>
+  <p>Get in touch for a bespoke, no-obligation quote tailored to your operation.</p>
+  <button class="fr-btn" onclick="getQuote()" style="color:#fff;">Get a Quote</button>
+  <a href="tel:+442033082936" class="fr-btn fr-btn--outline">Call Us — 020 3308 2936</a>
+
+  <ul class="fr-checklist" style="max-width:600px;margin:40px auto 0;">
+    <li>BESA Certified &amp; F-Gas Registered</li>
+    <li>TR/19 compliant with micron testing</li>
+    <li>95% on-site arrival rate</li>
+    <li>Dedicated account manager</li>
+    <li>AI-powered smart scheduling</li>
+    <li>Competitive, transparent pricing</li>
+    <li>Bespoke packages for every operation</li>
+    <li>EHO-compliant reports &amp; certificates</li>
+    <li>24/7 emergency call-out</li>
+    <li>500+ kitchens across London &amp; SE</li>
+  </ul>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="fr-footer">
+  <div class="fr-footer__brand">FAN RESCUE</div>
+  <p>Fan Rescue Ltd · Ability House, Unit 129, 121 Brooker Road, Waltham Abbey EN9 1JH<br>
+  Tel: 020 3308 2936 · <!--email_off-->office@fanrescue.co.uk<!--/email_off--> · <a href="https://fanrescue.co.uk" style="color:rgba(255,255,255,0.35);">fanrescue.co.uk</a><br>
+  Co No: 5954579 · VAT No: 906 9111 32 · BESA HV020676 · F-Gas FGAS2001890</p>
+</div>
+
+</div>
+
+<script>
+function getQuote() {
+  var e = 'office' + '\u0040' + 'fanrescue.co.uk';
+  var s = 'Cleaning Quote Enquiry';
+  var b = 'Good morning,\n\nI\u2019d like a quote for TR19 extraction cleaning at our site.\n\nSite name:\nSite address:\nType of operation:\nNumber of kitchens:\n\nThanks';
+  window.location.href = 'mailto:' + e + '?subject=' + encodeURIComponent(s) + '&body=' + encodeURIComponent(b);
+}
+</script>
+
+</body>
+</html>
