@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fan Rescue — Logo Wordmark Options</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Bebas+Neue&family=Rajdhani:wght@600;700&family=Barlow+Condensed:wght@600;700;800&family=Teko:wght@600;700&family=Antonio:wght@600;700&family=Source+Sans+3:wght@400;600&family=Archivo+Black&family=Saira+Condensed:wght@700;800&family=Chakra+Petch:wght@600;700&family=Yanone+Kaffeesatz:wght@600;700&family=Big+Shoulders+Display:wght@700;800&display=swap');
+
+  :root {
+    --navy-deep: #0A1628;
+    --navy-mid: #162844;
+    --gold: #C8973E;
+    --gold-light: #D4A94E;
+    --gold-pale: #E8D5A3;
+    --slate: #3D4F5F;
+    --warm-white: #F5F2EC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: #E8E4DE;
+    color: var(--navy-deep);
+  }
+
+  /* ── HEADER ─────────────────────────────────── */
+  header {
+    background: var(--navy-deep);
+    padding: 48px 40px 40px;
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+  }
+
+  header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: white;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  header h1 span { color: var(--gold); }
+
+  header p {
+    color: var(--gold-pale);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  /* ── LAYOUT ─────────────────────────────────── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  .section-header {
+    padding: 40px 0 20px;
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 28px;
+  }
+
+  .section-header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--navy-deep);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .section-header p {
+    color: var(--slate);
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  /* ── FONT OPTION CARD ──────────────────────── */
+  .font-option {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+
+  .font-option-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--warm-white);
+    border-bottom: 1px solid #e0dcd6;
+  }
+
+  .font-option-label h3 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--navy-deep);
+  }
+
+  .font-option-label .font-name {
+    font-size: 12px;
+    color: var(--slate);
+    background: white;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-family: monospace;
+  }
+
+  .colour-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .colour-variant {
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 160px;
+    position: relative;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .colour-variant:last-child { border-right: none; }
+
+  .colour-variant .logo-text {
+    text-align: left;
+    line-height: 1;
+  }
+
+  .colour-variant .fan {
+    display: block;
+    letter-spacing: 0.15em;
+  }
+
+  .colour-variant .rescue {
+    display: block;
+    letter-spacing: 0.15em;
+  }
+
+  .colour-variant .est {
+    display: block;
+    font-family: 'Source Sans 3', sans-serif !important;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    margin-top: 8px;
+    font-size: 10px !important;
+  }
+
+  .colour-variant .variant-label {
+    position: absolute;
+    bottom: 10px;
+    left: 28px;
+    font-size: 9px;
+    font-family: 'Source Sans 3', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    white-space: nowrap;
+  }
+
+  /* Colour combos */
+  .gold-on-navy {
+    background: var(--navy-deep);
+  }
+  .gold-on-navy .fan,
+  .gold-on-navy .rescue { color: var(--gold); }
+  .gold-on-navy .est { color: var(--gold-pale); }
+  .gold-on-navy .variant-label { color: var(--gold-pale); }
+
+  .white-on-navy {
+    background: var(--navy-deep);
+  }
+  .white-on-navy .fan { color: white; }
+  .white-on-navy .rescue { color: var(--gold); }
+  .white-on-navy .est { color: rgba(255,255,255,0.5); }
+  .white-on-navy .variant-label { color: rgba(255,255,255,0.4); }
+
+  .navy-on-gold {
+    background: var(--gold);
+  }
+  .navy-on-gold .fan,
+  .navy-on-gold .rescue { color: var(--navy-deep); }
+  .navy-on-gold .est { color: rgba(10,22,40,0.55); }
+  .navy-on-gold .variant-label { color: rgba(10,22,40,0.4); }
+
+  .navy-on-white {
+    background: white;
+    border-bottom: 1px solid #eee;
+  }
+  .navy-on-white .fan { color: var(--navy-deep); }
+  .navy-on-white .rescue { color: var(--gold); }
+  .navy-on-white .est { color: var(--slate); }
+  .navy-on-white .variant-label { color: var(--slate); }
+
+  .gold-on-white {
+    background: white;
+    border-bottom: 1px solid #eee;
+  }
+  .gold-on-white .fan { color: var(--gold); }
+  .gold-on-white .rescue { color: var(--navy-deep); }
+  .gold-on-white .est { color: var(--slate); }
+  .gold-on-white .variant-label { color: var(--slate); }
+
+  .white-gold-on-navymid {
+    background: var(--navy-mid);
+  }
+  .white-gold-on-navymid .fan { color: white; }
+  .white-gold-on-navymid .rescue { color: var(--gold-light); }
+  .white-gold-on-navymid .est { color: rgba(255,255,255,0.4); }
+  .white-gold-on-navymid .variant-label { color: rgba(255,255,255,0.35); }
+
+  /* 6-up grid for extra combos */
+  .colour-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  /* ── FONT SIZES ─────────────────────────────── */
+  .sz-oswald .fan,
+  .sz-oswald .rescue { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 38px; }
+
+  .sz-bebas .fan,
+  .sz-bebas .rescue { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 44px; }
+
+  .sz-rajdhani .fan,
+  .sz-rajdhani .rescue { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 38px; }
+
+  .sz-barlow .fan,
+  .sz-barlow .rescue { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 38px; }
+
+  .sz-teko .fan,
+  .sz-teko .rescue { font-family: 'Teko', sans-serif; font-weight: 700; font-size: 44px; }
+
+  .sz-antonio .fan,
+  .sz-antonio .rescue { font-family: 'Antonio', sans-serif; font-weight: 700; font-size: 36px; }
+
+  .sz-archivo .fan,
+  .sz-archivo .rescue { font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 36px; }
+
+  .sz-saira .fan,
+  .sz-saira .rescue { font-family: 'Saira Condensed', sans-serif; font-weight: 800; font-size: 40px; }
+
+  .sz-chakra .fan,
+  .sz-chakra .rescue { font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 36px; }
+
+  .sz-yanone .fan,
+  .sz-yanone .rescue { font-family: 'Yanone Kaffeesatz', sans-serif; font-weight: 700; font-size: 42px; }
+
+  .sz-bigshoulders .fan,
+  .sz-bigshoulders .rescue { font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 40px; }
+
+  /* ── SUMMARY TABLE ──────────────────────────── */
+  .summary-section {
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    margin: 40px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .summary-section h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy-deep);
+    margin-bottom: 16px;
+  }
+
+  .colour-ref {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .colour-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  .colour-chip .dot {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .colour-chip .info {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .colour-chip .info strong {
+    display: block;
+    color: var(--navy-deep);
+  }
+
+  .colour-chip .info span {
+    color: var(--slate);
+    font-family: monospace;
+    font-size: 11px;
+  }
+
+  /* ── FOOTER ─────────────────────────────────── */
+  footer {
+    background: var(--navy-deep);
+    border-top: 3px solid var(--gold);
+    color: var(--gold-pale);
+    text-align: center;
+    padding: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .colour-grid,
+    .colour-grid-6 { grid-template-columns: 1fr; }
+    header { padding: 32px 20px; }
+    header h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>FAN <span>RESCUE</span></h1>
+  <p>Logo Wordmark Options · Colour Variations</p>
+</header>
+
+<div class="container">
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 1: OSWALD -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 1</h2>
+    <p>Bold condensed — strong and industrial. High impact, excellent readability.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Oswald Bold</h3>
+      <span class="font-name">google: Oswald 700</span>
+    </div>
+    <div class="colour-grid-6 sz-oswald">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 2: BEBAS NEUE -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 2</h2>
+    <p>Tall, commanding uppercase — the classic bold display font. Clean lines, zero fuss.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Bebas Neue</h3>
+      <span class="font-name">google: Bebas Neue</span>
+    </div>
+    <div class="colour-grid-6 sz-bebas">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 3: BARLOW CONDENSED -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 3</h2>
+    <p>Extra bold condensed — modern and punchy. Slightly warmer than Bebas with more character.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Barlow Condensed ExtraBold</h3>
+      <span class="font-name">google: Barlow Condensed 800</span>
+    </div>
+    <div class="colour-grid-6 sz-barlow">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 4: TEKO -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 4</h2>
+    <p>Technical and angular — engineered feel. Works well for an extraction/HVAC brand.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Teko Bold</h3>
+      <span class="font-name">google: Teko 700</span>
+    </div>
+    <div class="colour-grid-6 sz-teko">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 5: RAJDHANI -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 5</h2>
+    <p>Geometric and sharp — slightly futuristic edge. Strong verticals, distinctive R and A shapes.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Rajdhani Bold</h3>
+      <span class="font-name">google: Rajdhani 700</span>
+    </div>
+    <div class="colour-grid-6 sz-rajdhani">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 6: ANTONIO -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 6</h2>
+    <p>Sleek and modern — slightly wider than the others. Premium feel, clean geometry.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Antonio Bold</h3>
+      <span class="font-name">google: Antonio 700</span>
+    </div>
+    <div class="colour-grid-6 sz-antonio">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text">
+          <span class="fan">FAN</span>
+          <span class="rescue">RESCUE</span>
+          <span class="est">— ESTABLISHED 2005 —</span>
+        </div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 7: ARCHIVO BLACK -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 7</h2>
+    <p>Heavy and wide — maximum presence. Unapologetically bold, fills the space.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Archivo Black</h3>
+      <span class="font-name">google: Archivo Black</span>
+    </div>
+    <div class="colour-grid-6 sz-archivo">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 8: SAIRA CONDENSED -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 8</h2>
+    <p>Tight and muscular — sports/industrial DNA. Compact but powerful.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Saira Condensed ExtraBold</h3>
+      <span class="font-name">google: Saira Condensed 800</span>
+    </div>
+    <div class="colour-grid-6 sz-saira">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 9: CHAKRA PETCH -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 9</h2>
+    <p>Squared-off and mechanical — precision engineering feel. Techy without being gimmicky.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Chakra Petch Bold</h3>
+      <span class="font-name">google: Chakra Petch 700</span>
+    </div>
+    <div class="colour-grid-6 sz-chakra">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 10: YANONE KAFFEESATZ -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 10</h2>
+    <p>Elegant condensed — European signage heritage. Tall, refined, distinctive character shapes.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Yanone Kaffeesatz Bold</h3>
+      <span class="font-name">google: Yanone Kaffeesatz 700</span>
+    </div>
+    <div class="colour-grid-6 sz-yanone">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FONT 11: BIG SHOULDERS DISPLAY -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="section-header">
+    <h2>Font Style 11</h2>
+    <p>Industrial American — built for signage and workwear. Chunky, no-nonsense, unmistakable.</p>
+  </div>
+
+  <div class="font-option">
+    <div class="font-option-label">
+      <h3>Big Shoulders Display ExtraBold</h3>
+      <span class="font-name">google: Big Shoulders Display 800</span>
+    </div>
+    <div class="colour-grid-6 sz-bigshoulders">
+      <div class="colour-variant gold-on-navy">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Gold on Navy</span>
+      </div>
+      <div class="colour-variant white-on-navy">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">White + Gold on Navy</span>
+      </div>
+      <div class="colour-variant navy-on-gold">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Navy on Gold</span>
+      </div>
+      <div class="colour-variant navy-on-white">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Navy + Gold on White</span>
+      </div>
+      <div class="colour-variant gold-on-white">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">Gold + Navy on White</span>
+      </div>
+      <div class="colour-variant white-gold-on-navymid">
+        <div class="logo-text"><span class="fan">FAN</span><span class="rescue">RESCUE</span><span class="est">— ESTABLISHED 2005 —</span></div>
+        <span class="variant-label">White + Gold on Navy Mid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- COLOUR REFERENCE -->
+  <!-- ════════════════════════════════════════════ -->
+  <div class="summary-section">
+    <h3>Colour Reference</h3>
+    <p style="color:var(--slate);font-size:13px;margin-bottom:8px;">Click any swatch to copy the hex code.</p>
+    <div class="colour-ref">
+      <div class="colour-chip" onclick="navigator.clipboard.writeText('#0A1628')">
+        <div class="dot" style="background:#0A1628"></div>
+        <div class="info"><strong>Navy Deep</strong><span>#0A1628</span></div>
+      </div>
+      <div class="colour-chip" onclick="navigator.clipboard.writeText('#162844')">
+        <div class="dot" style="background:#162844"></div>
+        <div class="info"><strong>Navy Mid</strong><span>#162844</span></div>
+      </div>
+      <div class="colour-chip" onclick="navigator.clipboard.writeText('#1E3A5F')">
+        <div class="dot" style="background:#1E3A5F"></div>
+        <div class="info"><strong>Navy Light</strong><span>#1E3A5F</span></div>
+      </div>
+      <div class="colour-chip" onclick="navigator.clipboard.writeText('#C8973E')">
+        <div class="dot" style="background:#C8973E"></div>
+        <div class="info"><strong>Gold</strong><span>#C8973E</span></div>
+      </div>
+      <div class="colour-chip" onclick="navigator.clipboard.writeText('#D4A94E')">
+        <div class="dot" style="background:#D4A94E"></div>
+        <div class="info"><strong>Gold Light</strong><span>#D4A94E</span></div>
+      </div>
+      <div class="colour-chip" onclick="navigator.clipboard.writeText('#E8D5A3')">
+        <div class="dot" style="background:#E8D5A3"></div>
+        <div class="info"><strong>Gold Pale</strong><span>#E8D5A3</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  FAN RESCUE LTD · LOGO WORDMARK OPTIONS · 2026 · CONFIDENTIAL
+</footer>
+
+</body>
+</html>
