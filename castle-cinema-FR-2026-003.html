@@ -121,7 +121,7 @@ a { color: #C9A84C; text-decoration: none; }
 .fr-cta { text-align: center; padding: 80px 24px; background: linear-gradient(135deg, #112035 0%, #142238 100%); color: #fff; }
 .fr-cta h2 { font-family: 'Bitter', sans-serif; font-size: clamp(28px, 4vw, 48px); color: #fff; margin-bottom: 16px; }
 .fr-cta p { color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 36px; }
-.fr-btn { display: inline-block; background: #C9A84C; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 16px 36px; border-radius: 2px; text-decoration: none; margin: 0 8px 12px; transition: background 0.2s, transform 0.15s; }
+.fr-btn { display: inline-block; background: #C9A84C; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 16px 36px; border-radius: 2px; text-decoration: none; margin: 0 8px 12px; transition: background 0.2s, transform 0.15s; border: none; cursor: pointer; }
 .fr-btn:hover { background: #b8943f; transform: translateY(-1px); }
 .fr-btn--outline { background: transparent; border: 2px solid rgba(255,255,255,0.4); color: #fff; }
 .fr-btn--outline:hover { border-color: #C9A84C; background: transparent; }
@@ -181,7 +181,7 @@ a { color: #C9A84C; text-decoration: none; }
       <div class="fr-hero__meta-item"><strong>Asher</strong>Theatron Media Limited</div>
       <div class="fr-hero__meta-item"><strong>Site</strong>64–66 Brooksby's Walk, London E9 6DA</div>
       <div class="fr-hero__meta-item"><strong>Phone</strong><a href="tel:+447739490125" style="color:rgba(255,255,255,0.55);">07739 490125</a></div>
-      <div class="fr-hero__meta-item"><strong>Email</strong><a href="/cdn-cgi/l/email-protection#204153484552060316141b544845434153544c4543494e454d410e434f4d" style="color:rgba(255,255,255,0.55);">asher&#64;thecastlecinema.com</a></div>
+      <div class="fr-hero__meta-item"><strong>Email</strong><!--email_off--><a href="mailto:asher@thecastlecinema.com" style="color:rgba(255,255,255,0.55);">asher@thecastlecinema.com</a><!--/email_off--></div>
       <div class="fr-hero__meta-item"><strong>Prepared by</strong>Sam Matthews, Fan Rescue Ltd</div>
       <div class="fr-hero__meta-item"><strong>Date</strong>19 March 2026</div>
       <div class="fr-hero__meta-item"><strong>Quote Ref</strong>FR-2026-003</div>
@@ -418,7 +418,7 @@ a { color: #C9A84C; text-decoration: none; }
         </div>
         <div class="fr-terms-item">
           <div class="fr-terms-item__label">To Accept</div>
-          <div class="fr-terms-item__value">Use the Accept Quote button or email customerservice&#64;fanrescue.co.uk</div>
+          <div class="fr-terms-item__value">Use the Accept Quote button or email <!--email_off-->customerservice@fanrescue.co.uk<!--/email_off--></div>
         </div>
       </div>
     </div>
@@ -441,7 +441,7 @@ a { color: #C9A84C; text-decoration: none; }
         <div class="fr-step__num">1</div>
         <div class="fr-step__content">
           <h3>Accept This Quote</h3>
-          <p>Click Accept Quote at the top of the page or email customerservice&#64;fanrescue.co.uk. We confirm your order and raise the deposit invoice the same day.</p>
+          <p>Click Accept Quote at the top of the page or email <!--email_off-->customerservice@fanrescue.co.uk<!--/email_off-->. We confirm your order and raise the deposit invoice the same day.</p>
         </div>
       </div>
       <div class="fr-step">
@@ -524,7 +524,7 @@ a { color: #C9A84C; text-decoration: none; }
         <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:8px;">Ask us about</div>
         <div style="font-family:'Bitter',sans-serif;font-size:22px;color:#C9A84C;margin-bottom:4px;">Cleaning Contracts</div>
         <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:20px;">TR19 · EHO-compliant · Certified</div>
-<a href="mailto:office&#64;fanrescue.co.uk" style="color:#C9A84C;">office&#64;fanrescue.co.uk</a>
+        <!--email_off--><a href="mailto:office@fanrescue.co.uk" style="display:inline-block;background:#C9A84C;color:#192840;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:12px 24px;border-radius:2px;text-decoration:none;">Get a Cleaning Quote</a><!--/email_off-->
       </div>
     </div>
   </div>
@@ -543,7 +543,7 @@ a { color: #C9A84C; text-decoration: none; }
 <div class="fr-footer">
   <div class="fr-footer__brand">FAN RESCUE</div>
   <p>Fan Rescue Ltd · Ability House, Unit 129, 121 Brooker Road, Waltham Abbey EN9 1JH<br>
-  Tel: 020 3308 2936 · enquiries&#64;fanrescue.co.uk · <a href="https://fanrescue.co.uk" style="color:rgba(255,255,255,0.35);">fanrescue.co.uk</a><br>
+  Tel: 020 3308 2936 · <!--email_off-->enquiries@fanrescue.co.uk<!--/email_off--> · <a href="https://fanrescue.co.uk" style="color:rgba(255,255,255,0.35);">fanrescue.co.uk</a><br>
   Co No: 5954579 · VAT No: 906 9111 32 · BESA HV020676 · F-Gas FGAS2001890<br>
   Quote Ref: FR-2026-003 · Valid 30 days from date of issue. All prices exclude VAT.</p>
 </div>
@@ -563,4 +563,16 @@ function downloadPDF() {
   overlay.classList.add('active');
   var topbar = document.getElementById('topbar');
   topbar.style.display = 'none';
-  setTimeout(funct
+  setTimeout(function() {
+    overlay.classList.remove('active');
+    window.print();
+    topbar.style.display = '';
+  }, 600);
+}
+document.getElementById('pdfOverlay').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('active');
+});
+</script>
+
+</body>
+</html>
