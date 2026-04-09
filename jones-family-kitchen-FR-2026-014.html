@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Jones Family Kitchen FR-2026-014 — Cleaning Proposal — Fan Rescue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Montserrat', sans-serif; color: #1b2a3b; line-height: 1.7; font-size: 16px; background: #f4f6f8; margin: 0; }
+a { color: #C9A84C; text-decoration: none; }
+
+/* ── TOPBAR ── */
+.fr-topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #192840; border-bottom: 2px solid #C9A84C; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+.fr-topbar__actions { display: flex; gap: 10px; align-items: center; }
+.fr-topbar__btn { display: inline-flex; align-items: center; gap: 6px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 8px 18px; border-radius: 2px; cursor: pointer; border: none; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+.fr-topbar__btn:hover { transform: translateY(-1px); }
+.fr-topbar__btn--pdf { background: rgba(255,255,255,0.1); color: #fff; }
+.fr-topbar__btn--pdf:hover { background: rgba(255,255,255,0.18); }
+.fr-topbar__btn--accept { background: #C9A84C; color: #fff; }
+.fr-topbar__btn--accept:hover { background: #b8943f; }
+.fr-topbar__btn svg { width: 14px; height: 14px; }
+
+/* ── PDF OVERLAY ── */
+.fr-pdf-overlay { position: fixed; inset: 0; background: rgba(25,40,64,0.85); display: flex; align-items: center; justify-content: center; z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.fr-pdf-overlay.active { opacity: 1; pointer-events: auto; }
+.fr-pdf-overlay__msg { background: #192840; border: 1px solid rgba(201,168,76,0.3); padding: 32px 48px; border-radius: 4px; text-align: center; }
+.fr-pdf-overlay__msg p { color: rgba(255,255,255,0.7); font-size: 14px; margin: 0; }
+.fr-pdf-overlay__msg strong { color: #C9A84C; display: block; margin-bottom: 8px; font-size: 16px; }
+
+/* ── PAGE ── */
+.fr-page { max-width: 960px; margin: 56px auto 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  .fr-topbar, .fr-pdf-overlay { display: none !important; }
+  .fr-page { margin: 0; box-shadow: none; max-width: 100%; }
+  body { background: #fff; }
+  .fr-hero { page-break-after: always; }
+  .fr-section, .fr-cta, .fr-footer { break-inside: avoid; }
+}
+
+/* ── LAYOUT ── */
+.frp1 { font-family: 'Montserrat', sans-serif; color: #1b2a3b; line-height: 1.7; font-size: 16px; }
+.frp1 a { color: #C9A84C; text-decoration: none; }
+.frp1 .fr-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+.frp1 .fr-section { padding: 72px 0; }
+.frp1 .fr-section--grey { background: #f4f6f8; }
+.frp1 .fr-section--dark { background: #192840; color: #fff; }
+
+/* ── HERO ── */
+.frp1 .fr-hero { background: linear-gradient(135deg, #0d1928 0%, #112035 45%, #192840 100%); color: #fff; padding: 90px 24px 80px; position: relative; overflow: hidden; }
+.frp1 .fr-hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 65%); border-radius: 50%; }
+.frp1 .fr-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #C9A84C, transparent); }
+.frp1 .fr-hero__inner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
+.frp1 .fr-hero__badge { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: #C9A84C; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 2px; margin-bottom: 28px; }
+.frp1 .fr-hero__label { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; margin-bottom: 16px; }
+.frp1 .fr-hero__title { font-family: 'Bitter', sans-serif; font-size: clamp(34px, 5.5vw, 60px); line-height: 1.05; color: #fff; margin-bottom: 20px; letter-spacing: -0.5px; }
+.frp1 .fr-hero__title span { color: #C9A84C; }
+.frp1 .fr-hero__subtitle { font-size: 17px; color: rgba(255,255,255,0.72); max-width: 600px; line-height: 1.65; margin-bottom: 36px; }
+.frp1 .fr-hero__meta { display: flex; gap: 32px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; }
+.frp1 .fr-hero__meta-item { font-size: 13px; color: rgba(255,255,255,0.55); }
+.frp1 .fr-hero__meta-item strong { display: block; color: #fff; font-size: 14px; margin-bottom: 2px; }
+
+/* ── TYPOGRAPHY ── */
+.frp1 .fr-section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; margin-bottom: 12px; }
+.frp1 .fr-h2 { font-family: 'Bitter', sans-serif; font-size: clamp(26px, 4vw, 42px); line-height: 1.1; color: #192840; margin-bottom: 20px; }
+.frp1 .fr-section--dark .fr-h2 { color: #fff; }
+.frp1 .fr-h3 { font-family: 'Bitter', sans-serif; font-size: 20px; color: #192840; margin-bottom: 12px; line-height: 1.2; }
+.frp1 .fr-lead { font-size: 17px; color: #3d5166; line-height: 1.75; margin-bottom: 24px; }
+.frp1 .fr-section--dark .fr-lead { color: rgba(255,255,255,0.72); }
+.frp1 p { margin-bottom: 16px; color: #3d5166; }
+.frp1 .fr-section--dark p { color: rgba(255,255,255,0.68); }
+.frp1 .fr-divider { width: 48px; height: 3px; background: #C9A84C; margin-bottom: 24px; border-radius: 2px; }
+
+/* ── CARDS ── */
+.frp1 .fr-grid { display: grid; gap: 24px; }
+.frp1 .fr-grid--2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.frp1 .fr-grid--3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.frp1 .fr-card--dark { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 28px 24px; }
+.frp1 .fr-card--dark h3, .frp1 .fr-card--dark p { color: rgba(255,255,255,0.85); }
+.frp1 .fr-card__icon { width: 44px; height: 44px; background: rgba(201,168,76,0.12); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 20px; }
+
+/* ── CERT BADGES ── */
+.frp1 .fr-certs { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+.frp1 .fr-cert { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 12px 16px; flex: 1; min-width: 200px; }
+.frp1 .fr-cert__icon { width: 40px; height: 40px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: 'Bitter', sans-serif; font-weight: 700; font-size: 16px; flex-shrink: 0; }
+.frp1 .fr-cert__icon--besa { background: rgba(201,168,76,0.2); color: #C9A84C; }
+.frp1 .fr-cert__icon--fgas { background: rgba(72,187,120,0.2); color: #48BB78; }
+.frp1 .fr-cert__label { font-size: 13px; font-weight: 700; color: #fff; }
+.frp1 .fr-cert__value { font-size: 12px; color: rgba(255,255,255,0.5); }
+
+/* ── STATS ROW ── */
+.frp1 .fr-stats { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; }
+.frp1 .fr-stat { flex: 1; min-width: 140px; text-align: center; padding: 32px 16px; border-right: 1px solid rgba(255,255,255,0.08); }
+.frp1 .fr-stat:last-child { border-right: none; }
+.frp1 .fr-stat__number { font-family: 'Bitter', sans-serif; font-size: 36px; color: #C9A84C; line-height: 1; margin-bottom: 6px; }
+.frp1 .fr-stat__label { font-size: 12px; color: rgba(255,255,255,0.55); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+
+/* ── CHECKLIST ── */
+.frp1 .fr-checklist { list-style: none; }
+.frp1 .fr-checklist li { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #e5eaf0; font-size: 15px; color: #3d5166; }
+.frp1 .fr-checklist li:last-child { border-bottom: none; }
+.frp1 .fr-checklist li::before { content: '\2713'; flex-shrink: 0; width: 22px; height: 22px; background: #C9A84C; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; margin-top: 1px; }
+
+/* ── PRICING ── */
+.frp1 .fr-pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.frp1 .fr-price-card { border: 2px solid #e5eaf0; border-radius: 4px; overflow: hidden; text-align: center; }
+.frp1 .fr-price-card--featured { border-color: #C9A84C; }
+.frp1 .fr-price-card__header { background: #f4f6f8; padding: 20px; border-bottom: 1px solid #e5eaf0; }
+.frp1 .fr-price-card--featured .fr-price-card__header { background: #C9A84C; }
+.frp1 .fr-price-card--featured .fr-price-card__header h3 { color: #fff; }
+.frp1 .fr-price-card__body { padding: 28px 20px; }
+.frp1 .fr-price-card__amount { font-family: 'Bitter', sans-serif; font-size: 42px; color: #192840; line-height: 1; margin-bottom: 4px; }
+.frp1 .fr-price-card__amount--featured { color: #C9A84C; }
+.frp1 .fr-price-card__period { font-size: 13px; color: #6b7a8d; margin-bottom: 20px; }
+.frp1 .fr-price-card__features { list-style: none; text-align: left; }
+.frp1 .fr-price-card__features li { font-size: 13px; color: #3d5166; padding: 7px 0; border-bottom: 1px solid #f0f3f6; display: flex; gap: 8px; }
+.frp1 .fr-price-card__features li::before { content: '\2713'; color: #C9A84C; font-weight: 800; flex-shrink: 0; }
+.frp1 .fr-price-card__badge { display: inline-block; background: #C9A84C; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; margin-bottom: 12px; }
+.frp1 .fr-price-card__save { display: inline-block; background: rgba(201,168,76,0.12); color: #a07835; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 2px; margin-top: 12px; }
+
+/* ── SCHEDULE TABLE ── */
+.frp1 .fr-schedule-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+.frp1 .fr-schedule-table th { background: #192840; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 14px 20px; text-align: left; }
+.frp1 .fr-schedule-table td { padding: 14px 20px; border-bottom: 1px solid #e5eaf0; font-size: 14px; color: #3d5166; }
+.frp1 .fr-schedule-table tr:last-child td { border-bottom: none; }
+.frp1 .fr-schedule-table td strong { color: #192840; }
+
+/* ── INCLUDES LIST (pricing) ── */
+.frp1 .fr-includes { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 24px; margin-top: 24px; }
+.frp1 .fr-includes li { font-size: 14px; color: #3d5166; padding: 6px 0; display: flex; gap: 8px; }
+.frp1 .fr-includes li::before { content: '\2713'; color: #C9A84C; font-weight: 800; flex-shrink: 0; }
+
+/* ── STEPS ── */
+.frp1 .fr-step { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.08); align-items: flex-start; }
+.frp1 .fr-step:last-child { border-bottom: none; }
+.frp1 .fr-step__num { flex-shrink: 0; width: 40px; height: 40px; border: 2px solid #C9A84C; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bitter', sans-serif; font-size: 18px; color: #C9A84C; }
+.frp1 .fr-step__content h3 { color: #fff; margin-bottom: 6px; font-size: 16px; font-weight: 700; }
+.frp1 .fr-step__content p { color: rgba(255,255,255,0.65); font-size: 14px; margin: 0; }
+
+/* ── T&C ── */
+.frp1 .fr-tc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 32px; }
+.frp1 .fr-tc-item h3 { font-size: 15px; font-weight: 700; color: #192840; margin-bottom: 6px; }
+.frp1 .fr-tc-item p { font-size: 13px; color: #6b7a8d; margin: 0; line-height: 1.65; }
+
+/* ── CTA ── */
+.frp1 .fr-cta { text-align: center; padding: 80px 24px; background: linear-gradient(135deg, #112035 0%, #142238 100%); color: #fff; }
+.frp1 .fr-cta h2 { font-family: 'Bitter', sans-serif; font-size: clamp(28px, 4vw, 48px); color: #fff; margin-bottom: 16px; }
+.frp1 .fr-cta p { color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 36px; }
+.frp1 .fr-btn { display: inline-block; background: #C9A84C; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 16px 36px; border-radius: 2px; text-decoration: none; margin: 0 8px 12px; transition: background 0.2s, transform 0.15s; cursor: pointer; border: none; }
+.frp1 .fr-btn:hover { background: #b8943f; transform: translateY(-1px); }
+.frp1 .fr-btn--outline { background: transparent; border: 2px solid rgba(255,255,255,0.4); }
+.frp1 .fr-btn--outline:hover { border-color: #C9A84C; background: transparent; }
+
+/* ── FOOTER ── */
+.frp1 .fr-footer { background: #0d1928; padding: 32px 24px; text-align: center; }
+.frp1 .fr-footer p { color: rgba(255,255,255,0.35); font-size: 12px; margin: 0; }
+.frp1 .fr-footer__brand { font-family: 'Bitter', sans-serif; font-size: 20px; color: #C9A84C; letter-spacing: 1px; margin-bottom: 8px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .frp1 .fr-section { padding: 52px 0; }
+  .frp1 .fr-hero { padding: 60px 20px 56px; }
+  .frp1 .fr-hero__meta { gap: 20px; }
+  .frp1 .fr-stat { min-width: 100px; padding: 24px 10px; }
+  .frp1 .fr-price-card__amount { font-size: 32px; }
+  .frp1 .fr-certs { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ STICKY TOP BAR ══ -->
+<div class="fr-topbar" id="topbar">
+  <div>
+    <div style="font-family:'Bitter',sans-serif;font-size:18px;color:#C9A84C;letter-spacing:1px;font-weight:700;line-height:1.1;">FAN RESCUE</div>
+    <div style="font-size:10px;color:rgba(255,255,255,0.45);letter-spacing:0.5px;margin-top:2px;">Commercial Kitchen Extraction &amp; HVAC Systems &middot; BESA Certified Since 2018</div>
+  </div>
+  <div class="fr-topbar__actions">
+    <button class="fr-topbar__btn fr-topbar__btn--pdf" onclick="downloadPDF()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download PDF
+    </button>
+    <button class="fr-topbar__btn fr-topbar__btn--accept" onclick="acceptQuote()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      Accept Quote
+    </button>
+  </div>
+</div>
+
+<!-- ══ PDF OVERLAY ══ -->
+<div class="fr-pdf-overlay" id="pdfOverlay">
+  <div class="fr-pdf-overlay__msg">
+    <strong>Preparing Your PDF</strong>
+    <p>Your browser print dialog will open in a moment. Select &ldquo;Save as PDF&rdquo; to download a copy of this proposal.</p>
+  </div>
+</div>
+
+<div class="fr-page">
+<div class="frp1">
+
+<!-- ══════════ 1. HERO ══════════ -->
+<div class="fr-hero">
+  <div class="fr-hero__inner">
+    <div class="fr-hero__badge">TR19 Kitchen Extraction &mdash; Cleaning Proposal</div>
+    <div class="fr-hero__label">Prepared exclusively for</div>
+    <h1 class="fr-hero__title">Jones Family Kitchen<br><span>Cleaning Proposal</span></h1>
+    <p class="fr-hero__subtitle">A TR19-compliant kitchen extraction cleaning service &mdash; ductwork, canopy, and fan unit &mdash; carried out by our BESA certified, F-Gas registered engineers.</p>
+    <div class="fr-hero__meta">
+      <div class="fr-hero__meta-item"><strong>Duncan</strong>The Curious Group</div>
+      <div class="fr-hero__meta-item"><strong>Site Address</strong>Eccleston Yard, London SW1W 9AZ</div>
+      <div class="fr-hero__meta-item"><strong>Email</strong><!--email_off--><a href="mailto:duncan@thecuriousgroup.co.uk" style="color:rgba(255,255,255,0.55);">duncan@thecuriousgroup.co.uk</a><!--/email_off--></div>
+      <div class="fr-hero__meta-item"><strong>Prepared by</strong>Sam Matthews, Fan Rescue Ltd</div>
+      <div class="fr-hero__meta-item"><strong>Quote Reference</strong>FR-2026-014</div>
+      <div class="fr-hero__meta-item"><strong>Date</strong>9 April 2026</div>
+      <div class="fr-hero__meta-item"><strong>Valid for</strong>30 days</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 2. INTRODUCTION ══════════ -->
+<div class="fr-section">
+  <div class="fr-container">
+    <div class="fr-section-label">Introduction</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Hi Duncan,</h2>
+    <p class="fr-lead">Good to hear from you. We installed the extraction fan at Jones Family Kitchen, so we know the system well &mdash; and we&rsquo;re the right people to keep it running properly.</p>
+    <p>Regular TR19-compliant cleaning is essential to maintain the performance of your extraction system, stay compliant with fire safety regulations, and keep your insurance valid. Grease builds up inside the ductwork, canopy, and fan unit over time &mdash; even with daily filter cleaning &mdash; and needs professional removal at the right intervals.</p>
+    <p>We&rsquo;ve put together two options below: a one-off clean if you just need a single service, or a bi-annual service agreement that locks in a lower price and keeps you permanently covered. Based on the type of cooking at Jones Family Kitchen, bi-annual (every 6 months) is the right frequency.</p>
+    <p>Any questions, give us a call or hit Accept Quote at the top of the page.</p>
+  </div>
+</div>
+
+<!-- ══════════ 3. ABOUT FAN RESCUE ══════════ -->
+<div class="fr-section fr-section--dark">
+  <div class="fr-container">
+    <div class="fr-section-label">About Fan Rescue</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">TR19 Cleaning Specialists</h2>
+    <p class="fr-lead">We&rsquo;ve been cleaning and maintaining commercial kitchen extraction systems across London and the South East since 2005. Every job is carried out by our own qualified engineers &mdash; no subcontracting.</p>
+    <div class="fr-grid fr-grid--3" style="margin-top:40px;">
+      <div class="fr-card--dark">
+        <div class="fr-card__icon">&#128295;</div>
+        <h3 style="color:#fff;font-size:16px;margin-bottom:8px;">BESA Certified Engineers</h3>
+        <p style="font-size:14px;">All cleaning is carried out by our own BESA certified, F-Gas registered engineers. Fully trained, fully insured, and TR19 compliant.</p>
+      </div>
+      <div class="fr-card--dark">
+        <div class="fr-card__icon">&#128203;</div>
+        <h3 style="color:#fff;font-size:16px;margin-bottom:8px;">Full Documentation</h3>
+        <p style="font-size:14px;">Before and after photographic report plus TR19 compliance certificate issued on every clean. Everything your EHO and insurer need to see.</p>
+      </div>
+      <div class="fr-card--dark">
+        <div class="fr-card__icon">&#9889;</div>
+        <h3 style="color:#fff;font-size:16px;margin-bottom:8px;">We Know Your System</h3>
+        <p style="font-size:14px;">We installed the extraction fan at Eccleston Yard, so we know the layout, access points, and components inside out. No guesswork &mdash; just a thorough, efficient clean every time.</p>
+      </div>
+    </div>
+    <div class="fr-certs">
+      <div class="fr-cert">
+        <div class="fr-cert__icon fr-cert__icon--besa">B</div>
+        <div>
+          <div class="fr-cert__label">BESA Certified</div>
+          <div class="fr-cert__value">HV020676 &middot; <a href="https://www.thebesa.com/HV020676/" style="color:#C9A84C;font-size:12px;">Verify</a></div>
+        </div>
+      </div>
+      <div class="fr-cert">
+        <div class="fr-cert__icon fr-cert__icon--fgas">F</div>
+        <div>
+          <div class="fr-cert__label">F-Gas Registered</div>
+          <div class="fr-cert__value">FGAS2001890</div>
+        </div>
+      </div>
+      <div class="fr-cert">
+        <div class="fr-cert__icon" style="background:rgba(99,179,237,0.2);color:#63B3ED;">&pound;</div>
+        <div>
+          <div class="fr-cert__label">Public Liability</div>
+          <div class="fr-cert__value">&pound;10 Million Cover</div>
+        </div>
+      </div>
+      <div class="fr-cert">
+        <div class="fr-cert__icon" style="background:rgba(154,117,234,0.2);color:#9A75EA;">PI</div>
+        <div>
+          <div class="fr-cert__label">Professional Indemnity</div>
+          <div class="fr-cert__value">&pound;10 Million Cover</div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-stats">
+      <div class="fr-stat"><div class="fr-stat__number">20+</div><div class="fr-stat__label">Years Trading</div></div>
+      <div class="fr-stat"><div class="fr-stat__number">500+</div><div class="fr-stat__label">Kitchens Cleaned</div></div>
+      <div class="fr-stat"><div class="fr-stat__number">100%</div><div class="fr-stat__label">TR19 Compliant</div></div>
+      <div class="fr-stat"><div class="fr-stat__number">0</div><div class="fr-stat__label">Subcontractors</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 4. SCOPE OF WORKS ══════════ -->
+<div class="fr-section fr-section--grey">
+  <div class="fr-container">
+    <div class="fr-section-label">What&rsquo;s Included</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Proposed Scope of Works</h2>
+    <p class="fr-lead">Below is the full scope of the cleaning service proposed for your extraction system at Eccleston Yard. All work is carried out in accordance with TR19 guidelines and current fire safety regulations.</p>
+
+    <div class="fr-grid fr-grid--2" style="margin-top:36px;">
+      <div>
+        <h3 class="fr-h3">Extraction System Cleaning</h3>
+        <ul class="fr-checklist">
+          <li>Full internal clean of all extraction ductwork from canopy to discharge point &mdash; complete degreasing of the full duct run using industry-approved methods and chemicals, all accessible sections cleaned to TR19 standard</li>
+          <li>Canopy deep clean and degreasing &mdash; full strip-down and degreasing of canopy internals including baffles, plenums, and grease channels, external surfaces cleaned and polished</li>
+          <li>Fan unit strip-down, clean, and reassembly &mdash; fan impeller, casing, and motor housing fully degreased, checked for wear, reassembled, and tested on completion</li>
+          <li>Baffle filter removal, deep clean, and refit &mdash; all stainless steel baffle filters removed, degreased, and refitted</li>
+          <li>Access panel inspection and cleaning of all accessible sections &mdash; all existing access panels opened, inspected, and cleaned, any inaccessible areas noted in the report</li>
+          <li>External discharge point and terminal cleaned and inspected</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="fr-h3">Documentation &amp; Certification</h3>
+        <ul class="fr-checklist">
+          <li>Full photographic report with before and after images &mdash; detailed photographic evidence of system condition before and after cleaning, provided digitally within 48 hours of payment</li>
+          <li>TR19 compliance certificate &mdash; issued upon receipt of payment, confirms your extraction system has been cleaned to TR19 standard as required by your EHO and insurer</li>
+          <li>Grease depth readings logged and recorded</li>
+          <li>Any access issues or remedial works flagged in writing</li>
+          <li>Digital copies stored for your records &mdash; certificates suitable for insurers and EHO inspections</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 5. PRICING ══════════ -->
+<div class="fr-section" id="pricingSection">
+  <div class="fr-container">
+    <div class="fr-section-label">Investment</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Your Investment</h2>
+    <p class="fr-lead">Two options &mdash; choose the one that works for your business.</p>
+
+    <div class="fr-pricing-grid" style="margin-top:36px;">
+      <div class="fr-price-card">
+        <div class="fr-price-card__header">
+          <h3 class="fr-h3" style="margin:0;">Option 1: One-Off Clean</h3>
+        </div>
+        <div class="fr-price-card__body">
+          <div class="fr-price-card__amount">&pound;895</div>
+          <div class="fr-price-card__period">+ VAT at 20% &middot; Total inc. VAT: &pound;1,074.00</div>
+          <p style="font-size:14px;color:#3d5166;margin-top:16px;margin-bottom:0;">Single service at the price above. No ongoing commitment &mdash; just book when you need it.</p>
+        </div>
+      </div>
+
+      <div class="fr-price-card fr-price-card--featured">
+        <div class="fr-price-card__header">
+          <h3 class="fr-h3" style="margin:0;color:#fff;">Option 2: Service Agreement</h3>
+        </div>
+        <div class="fr-price-card__body">
+          <div class="fr-price-card__badge">Recommended</div>
+          <div class="fr-price-card__amount fr-price-card__amount--featured">&pound;785</div>
+          <div class="fr-price-card__period">per service + VAT &middot; Total per service inc. VAT: &pound;942.00</div>
+          <p style="font-size:14px;color:#3d5166;margin-top:16px;margin-bottom:12px;">Minimum <strong>12-month agreement</strong> on a <strong>bi-annual</strong> (every 6 months) basis. Covers the initial clean plus the next two scheduled services, ensuring uninterrupted TR19 compliance.</p>
+          <div class="fr-price-card__save">Save &pound;110 per clean vs one-off pricing</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:36px;">
+      <h3 class="fr-h3" style="margin-bottom:16px;">Every clean includes</h3>
+      <ul class="fr-includes">
+        <li>BESA certified &amp; F-Gas registered engineers</li>
+        <li>Before &amp; after photographic report</li>
+        <li>All chemicals, equipment &amp; materials</li>
+        <li>TR19 compliance certificate</li>
+        <li>Flexible scheduling (evenings / early mornings)</li>
+        <li>Full clean-up of work area on completion</li>
+        <li>Dedicated account manager</li>
+        <li>AI-powered scheduling &amp; reminders</li>
+      </ul>
+    </div>
+
+    <div style="background:#f4f6f8;border:1px solid #e5eaf0;padding:24px;border-radius:4px;margin-top:32px;">
+      <strong style="display:block;margin-bottom:8px;">Payment Terms</strong>
+      <p style="margin:0;font-size:14px;color:#3d5166;">Full payment due on completion of each visit. Bank transfer only. TR19 certificates and photographic reports issued within 48 hours of payment.</p>
+    </div>
+
+    <div style="background:#f4f6f8;border:1px solid #e5eaf0;padding:24px;border-radius:4px;margin-top:16px;">
+      <strong style="display:block;margin-bottom:8px;">Quote Validity</strong>
+      <p style="margin:0;font-size:14px;color:#3d5166;">30 days from date of issue (valid until 9 May 2026)</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 6. CLEANING FREQUENCY GUIDE ══════════ -->
+<div class="fr-section fr-section--grey">
+  <div class="fr-container">
+    <div class="fr-section-label">Recommended Schedule</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Cleaning Frequency Guide</h2>
+    <p class="fr-lead">Based on kitchen usage to maintain TR19 compliance and satisfy your insurance requirements.</p>
+
+    <table class="fr-schedule-table">
+      <thead>
+        <tr>
+          <th>Cooking Type</th>
+          <th>Recommended Frequency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Heavy use (chargrills, woks, deep fat fryers)</td>
+          <td><strong>Every 3 months</strong></td>
+        </tr>
+        <tr>
+          <td>Moderate use (general cooking, ovens, mixed menus)</td>
+          <td><strong>Every 6 months</strong></td>
+        </tr>
+        <tr>
+          <td>Light use (reheating, sandwich prep)</td>
+          <td><strong>Every 12 months</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:13px;color:#6b7a8d;margin-top:20px;"><strong>Our recommendation for Jones Family Kitchen:</strong> Based on the type of cooking at your site, we recommend <strong>bi-annual (every 6 months)</strong> cleaning to maintain TR19 compliance. We&rsquo;ll assess your system during the initial clean and confirm this is the right frequency based on actual grease accumulation.</p>
+  </div>
+</div>
+
+<!-- ══════════ 7. GETTING STARTED ══════════ -->
+<div class="fr-section fr-section--dark">
+  <div class="fr-container">
+    <div class="fr-section-label">Getting Started</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">How It Works</h2>
+    <p class="fr-lead">From acceptance to a fully cleaned, certified extraction system.</p>
+    <div style="margin-top:32px;">
+      <div class="fr-step">
+        <div class="fr-step__num">1</div>
+        <div class="fr-step__content">
+          <h3>Accept This Quote</h3>
+          <p>Click Accept Quote at the top of the page or email <!--email_off-->office@fanrescue.co.uk<!--/email_off-->. Once accepted, we arrange scheduling straight away. If you choose the Service Agreement, we&rsquo;ll send a formal agreement for e-signature before work begins.</p>
+        </div>
+      </div>
+      <div class="fr-step">
+        <div class="fr-step__num">2</div>
+        <div class="fr-step__content">
+          <h3>Calendar Invite &amp; Confirmation</h3>
+          <p>A Google Calendar event is created for every scheduled service and sent to you for acceptance. This confirms the date, time, and site details &mdash; nothing happens until you&rsquo;ve accepted the invite.</p>
+        </div>
+      </div>
+      <div class="fr-step">
+        <div class="fr-step__num">3</div>
+        <div class="fr-step__content">
+          <h3>We Clean Your System</h3>
+          <p>Our BESA certified engineers arrive at the agreed time &mdash; evenings and early mornings available. Full extraction system cleaned from canopy to discharge point. Work area left spotless.</p>
+        </div>
+      </div>
+      <div class="fr-step">
+        <div class="fr-step__num">4</div>
+        <div class="fr-step__content">
+          <h3>Payment &amp; Certification</h3>
+          <p>Payment is due on completion via bank transfer. Once received, your TR19 compliance certificate and full photographic report are issued within 48 hours. You&rsquo;re compliant, insured, and covered.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 8. TERMS & CONDITIONS ══════════ -->
+<div class="fr-section">
+  <div class="fr-container">
+    <div class="fr-section-label">Terms &amp; Conditions</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Terms &amp; Conditions</h2>
+
+    <div class="fr-tc-grid">
+      <div class="fr-tc-item">
+        <h3>Payment</h3>
+        <p>Full payment due on completion. Bank transfer only. TR19 certificates and photographic reports issued within 48 hours of payment.</p>
+      </div>
+      <div class="fr-tc-item">
+        <h3>Agreement</h3>
+        <p>This proposal must be accepted before services are scheduled. Service Agreements require a signed agreement via e-signature before work begins. All services are confirmed via Google Calendar invite &mdash; accepted by the client.</p>
+      </div>
+      <div class="fr-tc-item">
+        <h3>Service Agreement</h3>
+        <p>Minimum 12-month commitment on a bi-annual basis. Covers the initial clean plus the next two scheduled services. Early termination charged at the one-off rate of &pound;895 + VAT per service for any remaining visits.</p>
+      </div>
+      <div class="fr-tc-item">
+        <h3>Access &amp; Cancellation</h3>
+        <p>Client must ensure safe access to all extraction components. Additional access (scaffolding, cherry picker) quoted separately. 48 hours&rsquo; notice for cancellation or rescheduling.</p>
+      </div>
+      <div class="fr-tc-item">
+        <h3>Insurance</h3>
+        <p>Fan Rescue Ltd holds full public liability insurance (&pound;10m) and employer&rsquo;s liability insurance. Copies available on request.</p>
+      </div>
+      <div class="fr-tc-item">
+        <h3>Standards</h3>
+        <p>All cleaning carried out to TR19 standards by BESA certified and F-Gas registered engineers.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 9. CTA ══════════ -->
+<div class="fr-cta" id="acceptSection">
+  <h2>Ready to Proceed?</h2>
+  <p>Click Accept to confirm your agreement to the scope, terms, and pricing in this proposal. We&rsquo;ll be back to you the same day.</p>
+  <button class="fr-btn" onclick="acceptQuote()">Accept This Quote</button>
+  <a href="tel:+442033082936" class="fr-btn fr-btn--outline">Call Us &mdash; 020 3308 2936</a>
+  <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:24px;max-width:500px;margin-left:auto;margin-right:auto;">Quote Ref: FR-2026-014 &middot; Valid 30 days from date of issue &middot; BESA HV020676 &middot; F-Gas FGAS2001890</p>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="fr-footer">
+  <div class="fr-footer__brand">FAN RESCUE</div>
+  <p>Fan Rescue Ltd &middot; Ability House, Unit 129, 121 Brooker Road, Waltham Abbey EN9 1JH<br>
+  Tel: 020 3308 2936 &middot; <!--email_off-->office@fanrescue.co.uk<!--/email_off--> &middot; <a href="https://fanrescue.co.uk" style="color:rgba(255,255,255,0.35);">fanrescue.co.uk</a><br>
+  Co No: 5954579 &middot; VAT No: 906 9111 32 &middot; BESA HV020676 &middot; F-Gas FGAS2001890<br>
+  Quote Ref: FR-2026-014 &middot; Valid 30 days from date of issue. All prices exclude VAT unless stated.</p>
+</div>
+
+</div>
+</div>
+
+<!-- ══ TRACKING ══ -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5d9632d8a3084226b854145a0da83ba8"}'></script>
+<script>
+!function(){var t="proposal-tracker.office-33b.workers.dev",n=Date.now(),r=0,a=0;function s(){return Math.round((Date.now()-n)/1e3)}function o(){var e=document.documentElement,t=e.scrollHeight-e.clientHeight;return t>0?Math.round(100*e.scrollTop/t):0}function c(e,i){var d={event:e,ref:document.title,time:s(),scroll:o(),ua:navigator.userAgent};if(i)for(var k in i)d[k]=i[k];navigator.sendBeacon?navigator.sendBeacon("https://"+t+"/track",JSON.stringify(d)):fetch("https://"+t+"/track",{method:"POST",body:JSON.stringify(d),keepalive:!0})}c("view");setInterval(function(){var p=o();p>a&&(a=p);r++},5e3);window.addEventListener("beforeunload",function(){c("leave",{maxScroll:a,engaged:r})});window.__frTrack=c}();
+</script>
+
+<script>
+function acceptQuote() {
+  if(window.__frTrack) window.__frTrack('accept');
+  var e = 'office' + '\u0040' + 'fanrescue.co.uk';
+  var cc = 'customerservice' + '\u0040' + 'fanrescue.co.uk' + ',' + 'huzaifa' + '\u0040' + 'fanrescue.co.uk' + ',' + 'irfan.nakip' + '\u0040' + 'fanrescue.co.uk';
+  var s = 'Cleaning Proposal Acceptance \u2014 Jones Family Kitchen \u2014 FR-2026-014';
+  var b = 'Hi Sam,\n\nI would like to accept the cleaning proposal FR-2026-014 for Jones Family Kitchen at Eccleston Yard, London SW1W 9AZ.\n\nPlease indicate preferred option:\n\n\u2610 One-Off Clean (\u00a31,074.00 inc VAT)\n\u2610 Service Agreement (\u00a3942.00 per service inc VAT)\n\nThanks,\nDuncan\nThe Curious Group';
+  window.location.href = 'mailto:' + e + '?cc=' + encodeURIComponent(cc) + '&subject=' + encodeURIComponent(s) + '&body=' + encodeURIComponent(b);
+}
+function downloadPDF() {
+  if(window.__frTrack) window.__frTrack('download');
+  var overlay = document.getElementById('pdfOverlay');
+  overlay.classList.add('active');
+  var topbar = document.getElementById('topbar');
+  topbar.style.display = 'none';
+  setTimeout(function() {
+    overlay.classList.remove('active');
+    window.print();
+    topbar.style.display = '';
+  }, 600);
+}
+document.getElementById('pdfOverlay').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('active');
+});
+</script>
+
+</body>
+</html>
