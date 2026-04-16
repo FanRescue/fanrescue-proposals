@@ -574,5 +574,17 @@ document.getElementById('pdfOverlay').addEventListener('click', function(e) {
 });
 </script>
 
-</body>
+<script>
+window.__frRef = "FR-2026-003";
+(function(){
+  if(!window.__frRef || !/^FR-\d{4}-\d{3}$/.test(window.__frRef)) return;
+  var u = "https://proposal-tracker.office-33b.workers.dev/track";
+  var p = JSON.stringify({ ref: window.__frRef });
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(u, new Blob([p], {type:"application/json"}));
+  } else {
+    fetch(u, {method:"POST", body:p, headers:{"Content-Type":"application/json"}, keepalive:true});
+  }
+})();
+</script></body>
 </html>
