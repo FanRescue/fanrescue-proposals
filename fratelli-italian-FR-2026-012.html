@@ -590,12 +590,21 @@ a { color: #C9A84C; text-decoration: none; }
 <!-- ══ TRACKING ══ -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5d9632d8a3084226b854145a0da83ba8"}'></script>
 <script>
-!function(){var t="proposal-tracker.office-33b.workers.dev",n=Date.now(),r=0,a=0;function s(){return Math.round((Date.now()-n)/1e3)}function o(){var e=document.documentElement,t=e.scrollHeight-e.clientHeight;return t>0?Math.round(100*e.scrollTop/t):0}function c(e,i){var d={event:e,ref:document.title,time:s(),scroll:o(),ua:navigator.userAgent};if(i)for(var k in i)d[k]=i[k];navigator.sendBeacon?navigator.sendBeacon("https://"+t+"/track",JSON.stringify(d)):fetch("https://"+t+"/track",{method:"POST",body:JSON.stringify(d),keepalive:!0})}c("view");setInterval(function(){var p=o();p>a&&(a=p);r++},5e3);window.addEventListener("beforeunload",function(){c("leave",{maxScroll:a,engaged:r})});window.__frTrack=c}();
+window.__frRef = "FR-2026-012";
+(function(){
+  if(!window.__frRef || !/^FR-\d{4}-\d{3}$/.test(window.__frRef)) return;
+  var u = "https://proposal-tracker.office-33b.workers.dev/track";
+  var p = JSON.stringify({ ref: window.__frRef });
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(u, new Blob([p], {type:"application/json"}));
+  } else {
+    fetch(u, {method:"POST", body:p, headers:{"Content-Type":"application/json"}, keepalive:true});
+  }
+})();
 </script>
 
 <script>
 function acceptQuote() {
-  if(window.__frTrack) window.__frTrack('accept');
   var e = 'office' + '\u0040' + 'fanrescue.co.uk';
   var cc = 'customerservice' + '\u0040' + 'fanrescue.co.uk' + ',' + 'huzaifa' + '\u0040' + 'fanrescue.co.uk' + ',' + 'irfan.nakip' + '\u0040' + 'fanrescue.co.uk';
   var s = 'Cleaning Proposal Acceptance \u2014 Fratelli Italian \u2014 FR-2026-012';
@@ -603,7 +612,6 @@ function acceptQuote() {
   window.location.href = 'mailto:' + e + '?cc=' + encodeURIComponent(cc) + '&subject=' + encodeURIComponent(s) + '&body=' + encodeURIComponent(b);
 }
 function downloadPDF() {
-  if(window.__frTrack) window.__frTrack('download');
   var overlay = document.getElementById('pdfOverlay');
   overlay.classList.add('active');
   var topbar = document.getElementById('topbar');
