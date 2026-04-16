@@ -581,10 +581,9 @@ window.__frRef = "FR-2026-003";
   var u = "https://proposal-tracker.office-33b.workers.dev/track";
   var p = JSON.stringify({ ref: window.__frRef });
   if (navigator.sendBeacon) {
-    navigator.sendBeacon(u, new Blob([p], {type:"application/json"}));
+    navigator.sendBeacon(u, new Blob([p], {type:"text/plain"}));
   } else {
-    fetch(u, {method:"POST", body:p, headers:{"Content-Type":"application/json"}, keepalive:true});
-  }
+fetch(u, {method:"POST", body:p, headers:{"Content-Type":"text/plain"}, keepalive:true, credentials:"omit"});  }
 })();
 </script></body>
 </html>
