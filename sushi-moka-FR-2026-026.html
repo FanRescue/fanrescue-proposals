@@ -124,6 +124,12 @@ a { color: #C9A84C; text-decoration: none; }
 .frp1 .fr-price-card__badge { display: inline-block; background: #C9A84C; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; margin-bottom: 12px; }
 .frp1 .fr-price-card__save { display: inline-block; background: rgba(201,168,76,0.12); color: #a07835; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 2px; margin-top: 12px; }
 
+/* ── PRICE BREAKDOWN ── */
+.frp1 .fr-price-breakdown { text-align: left; background: #f8f9fb; border: 1px solid #e5eaf0; border-radius: 3px; padding: 14px 16px; margin-top: 16px; font-size: 13px; }
+.frp1 .fr-price-breakdown__row { display: flex; justify-content: space-between; padding: 4px 0; color: #3d5166; }
+.frp1 .fr-price-breakdown__row--total { border-top: 1px solid #e5eaf0; margin-top: 6px; padding-top: 8px; font-weight: 700; color: #192840; }
+.frp1 .fr-price-breakdown__row--total span:last-child { color: #C9A84C; }
+
 /* ── SCHEDULE TABLE ── */
 .frp1 .fr-schedule-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
 .frp1 .fr-schedule-table th { background: #192840; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 14px 20px; text-align: left; }
@@ -349,7 +355,7 @@ a { color: #C9A84C; text-decoration: none; }
           <li>Full internal clean of all extraction ductwork from canopy to discharge point &mdash; complete degreasing of the full duct run using industry-approved methods and chemicals, all accessible sections cleaned to TR19 standard</li>
           <li>Canopy deep clean and degreasing &mdash; full strip-down and degreasing of canopy internals including baffles, plenums, and grease channels, external surfaces cleaned and polished</li>
           <li>Fan unit strip-down, clean, and reassembly &mdash; fan impeller, casing, and motor housing fully degreased, checked for wear, reassembled, and tested on completion</li>
-          <li>Baffle filter removal, deep clean, and refit &mdash; all stainless steel baffle filters removed, degreased, and refitted</li>
+          <li>Replacement grease filters supplied and fitted &mdash; new stainless steel baffle grease filters supplied and installed on every visit (see investment section for filter cost)</li>
           <li>Access panel inspection and cleaning of all accessible sections &mdash; all existing access panels opened, inspected, and cleaned, any inaccessible areas noted in the report</li>
           <li>External discharge point and terminal cleaned and inspected</li>
         </ul>
@@ -379,7 +385,7 @@ a { color: #C9A84C; text-decoration: none; }
     <div class="fr-section-label">Investment</div>
     <div class="fr-divider"></div>
     <h2 class="fr-h2">Your Investment</h2>
-    <p class="fr-lead">Two options &mdash; choose the one that works for your business.</p>
+    <p class="fr-lead">Two options &mdash; choose the one that works for your business. Both prices include the supply and fitting of replacement grease filters on each visit.</p>
 
     <div class="fr-pricing-grid" style="margin-top:36px;">
       <div class="fr-price-card">
@@ -387,8 +393,13 @@ a { color: #C9A84C; text-decoration: none; }
           <h3 class="fr-h3" style="margin:0;">Option 1: One-Off Clean</h3>
         </div>
         <div class="fr-price-card__body">
-          <div class="fr-price-card__amount">&pound;995</div>
-          <div class="fr-price-card__period">+ VAT at 20% &middot; Total inc. VAT: &pound;1,194.00</div>
+          <div class="fr-price-card__amount">&pound;1,115</div>
+          <div class="fr-price-card__period">+ VAT at 20% &middot; Total inc. VAT: &pound;1,338.00</div>
+          <div class="fr-price-breakdown">
+            <div class="fr-price-breakdown__row"><span>TR19 cleaning service</span><span>&pound;995.00</span></div>
+            <div class="fr-price-breakdown__row"><span>Replacement grease filters</span><span>&pound;120.00</span></div>
+            <div class="fr-price-breakdown__row fr-price-breakdown__row--total"><span>Total ex VAT</span><span>&pound;1,115.00</span></div>
+          </div>
           <p style="font-size:14px;color:#3d5166;margin-top:16px;margin-bottom:0;">Single service at the price above. No ongoing commitment &mdash; just book when you need it.</p>
         </div>
       </div>
@@ -399,8 +410,13 @@ a { color: #C9A84C; text-decoration: none; }
         </div>
         <div class="fr-price-card__body">
           <div class="fr-price-card__badge">Recommended</div>
-          <div class="fr-price-card__amount fr-price-card__amount--featured">&pound;785</div>
-          <div class="fr-price-card__period">per service + VAT &middot; Total per service inc. VAT: &pound;942.00</div>
+          <div class="fr-price-card__amount fr-price-card__amount--featured">&pound;905</div>
+          <div class="fr-price-card__period">per service + VAT &middot; Total per service inc. VAT: &pound;1,086.00</div>
+          <div class="fr-price-breakdown">
+            <div class="fr-price-breakdown__row"><span>TR19 cleaning service</span><span>&pound;785.00</span></div>
+            <div class="fr-price-breakdown__row"><span>Replacement grease filters</span><span>&pound;120.00</span></div>
+            <div class="fr-price-breakdown__row fr-price-breakdown__row--total"><span>Total per service ex VAT</span><span>&pound;905.00</span></div>
+          </div>
           <p style="font-size:14px;color:#3d5166;margin-top:16px;margin-bottom:12px;">Minimum <strong>24-month agreement</strong> on a <strong>bi-annual</strong> (every 6 months) basis. Four cleans across the term, ensuring uninterrupted TR19 compliance year-round.</p>
           <div class="fr-price-card__save">Save &pound;210 per clean vs one-off pricing</div>
         </div>
@@ -411,6 +427,7 @@ a { color: #C9A84C; text-decoration: none; }
       <h3 class="fr-h3" style="margin-bottom:16px;">Every clean includes</h3>
       <ul class="fr-includes">
         <li>BESA certified &amp; F-Gas registered engineers</li>
+        <li>Replacement grease filters supplied &amp; fitted</li>
         <li>Before &amp; after photographic report</li>
         <li>All chemicals, equipment &amp; materials</li>
         <li>TR19 compliance certificate</li>
@@ -526,7 +543,7 @@ a { color: #C9A84C; text-decoration: none; }
       </div>
       <div class="fr-tc-item">
         <h3>Service Agreement</h3>
-        <p>Minimum 24-month commitment on a bi-annual basis (2 cleans per year, 4 across the term). Early termination charged at the one-off rate of &pound;995 + VAT per service for any remaining visits.</p>
+        <p>Minimum 24-month commitment on a bi-annual basis (2 cleans per year, 4 across the term). Early termination charged at the one-off rate of &pound;1,115 + VAT per service for any remaining visits.</p>
       </div>
       <div class="fr-tc-item">
         <h3>Access &amp; Cancellation</h3>
@@ -577,7 +594,7 @@ function acceptQuote() {
   var e = 'office' + '\u0040' + 'fanrescue.co.uk';
   var cc = 'customerservice' + '\u0040' + 'fanrescue.co.uk' + ',' + 'huzaifa' + '\u0040' + 'fanrescue.co.uk' + ',' + 'irfan.nakip' + '\u0040' + 'fanrescue.co.uk';
   var s = 'Cleaning Proposal Acceptance \u2014 Sushi Moka \u2014 FR-2026-026';
-  var b = 'Hi Sam,\n\nI would like to accept the cleaning proposal FR-2026-026 for Sushi Moka at 24 Ryeland Boulevard, London SW18 1UN.\n\nPlease indicate preferred option:\n\n\u2610 One-Off Clean (\u00a31,194.00 inc VAT)\n\u2610 Service Agreement \u2014 24-month bi-annual (\u00a3942.00 per service inc VAT)\n\nThanks,\nHai\nFineat Limited t/a Sushi Moka';
+  var b = 'Hi Sam,\n\nI would like to accept the cleaning proposal FR-2026-026 for Sushi Moka at 24 Ryeland Boulevard, London SW18 1UN.\n\nPlease indicate preferred option:\n\n\u2610 One-Off Clean (\u00a31,338.00 inc VAT \u2014 incl. filters)\n\u2610 Service Agreement \u2014 24-month bi-annual (\u00a31,086.00 per service inc VAT \u2014 incl. filters)\n\nThanks,\nHai\nFineat Limited t/a Sushi Moka';
   window.location.href = 'mailto:' + e + '?cc=' + encodeURIComponent(cc) + '&subject=' + encodeURIComponent(s) + '&body=' + encodeURIComponent(b);
 }
 function downloadPDF() {
