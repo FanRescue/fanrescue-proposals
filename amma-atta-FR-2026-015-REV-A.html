@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Amma &amp; Atta — Kitchen Extraction &amp; HVAC Installation Quote — Fan Rescue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Montserrat', sans-serif; color: #1b2a3b; line-height: 1.7; font-size: 16px; background: #f4f6f8; margin: 0; }
+a { color: #C9A84C; text-decoration: none; }
+
+/* ── TOPBAR ── */
+.fr-topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #192840; border-bottom: 2px solid #C9A84C; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+.fr-topbar__actions { display: flex; gap: 10px; align-items: center; }
+.fr-topbar__btn { display: inline-flex; align-items: center; gap: 6px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 8px 18px; border-radius: 2px; cursor: pointer; border: none; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+.fr-topbar__btn:hover { transform: translateY(-1px); }
+.fr-topbar__btn--pdf { background: rgba(255,255,255,0.1); color: #fff; }
+.fr-topbar__btn--pdf:hover { background: rgba(255,255,255,0.18); }
+.fr-topbar__btn--accept { background: #C9A84C; color: #fff; }
+.fr-topbar__btn--accept:hover { background: #b8943f; }
+.fr-topbar__btn svg { width: 14px; height: 14px; }
+
+/* ── PDF OVERLAY ── */
+.fr-pdf-overlay { position: fixed; inset: 0; background: rgba(25,40,64,0.85); display: flex; align-items: center; justify-content: center; z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.fr-pdf-overlay.active { opacity: 1; pointer-events: auto; }
+.fr-pdf-overlay__msg { background: #192840; border: 1px solid rgba(201,168,76,0.3); padding: 32px 48px; border-radius: 4px; text-align: center; }
+.fr-pdf-overlay__msg p { color: rgba(255,255,255,0.7); font-size: 14px; margin: 0; }
+.fr-pdf-overlay__msg strong { color: #C9A84C; display: block; margin-bottom: 8px; font-size: 16px; }
+
+/* ── PAGE ── */
+.fr-page { max-width: 960px; margin: 56px auto 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+
+@media print {
+  .fr-topbar, .fr-pdf-overlay { display: none !important; }
+  .fr-page { margin: 0; box-shadow: none; max-width: 100%; }
+  body { background: #fff; }
+  * { -webkit-print-color-adjust: exact !important; }
+  .fr-hero { page-break-after: always; padding: 48px 24px; }
+  .fr-hero::before, .fr-hero::after { display: none; }
+  .fr-investment, .fr-scope-block, .fr-step, .fr-cert, .fr-stats, .fr-cta, .fr-footer { break-inside: avoid; }
+  .frp2 .fr-section { padding: 36px 0; }
+}
+
+/* ── LAYOUT ── */
+.frp2 { font-family: 'Montserrat', sans-serif; color: #1b2a3b; line-height: 1.7; font-size: 16px; }
+.frp2 a { color: #C9A84C; text-decoration: none; }
+.frp2 .fr-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+.frp2 .fr-section { padding: 72px 0; }
+.frp2 .fr-section--grey { background: #f4f6f8; }
+.frp2 .fr-section--dark { background: #192840; color: #fff; }
+
+/* ── HERO ── */
+.frp2 .fr-hero { background: linear-gradient(135deg, #0d1928 0%, #112035 45%, #192840 100%); color: #fff; padding: 90px 24px 80px; position: relative; overflow: hidden; }
+.frp2 .fr-hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 65%); border-radius: 50%; }
+.frp2 .fr-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #C9A84C, transparent); }
+.frp2 .fr-hero__inner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
+.frp2 .fr-hero__badge { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: #C9A84C; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 2px; margin-bottom: 28px; }
+.frp2 .fr-hero__label { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; margin-bottom: 16px; }
+.frp2 .fr-hero__title { font-family: 'Bitter', sans-serif; font-size: clamp(34px, 5.5vw, 60px); line-height: 1.05; color: #fff; margin-bottom: 20px; letter-spacing: -0.5px; }
+.frp2 .fr-hero__title span { color: #C9A84C; }
+.frp2 .fr-hero__subtitle { font-size: 17px; color: rgba(255,255,255,0.72); max-width: 600px; line-height: 1.65; margin-bottom: 36px; }
+.frp2 .fr-hero__meta { display: flex; gap: 32px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; }
+.frp2 .fr-hero__meta-item { font-size: 13px; color: rgba(255,255,255,0.55); }
+.frp2 .fr-hero__meta-item strong { display: block; color: #fff; font-size: 14px; margin-bottom: 2px; }
+
+/* ── TYPOGRAPHY ── */
+.frp2 .fr-section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; margin-bottom: 12px; }
+.frp2 .fr-h2 { font-family: 'Bitter', sans-serif; font-size: clamp(26px, 4vw, 42px); line-height: 1.1; color: #192840; margin-bottom: 20px; }
+.frp2 .fr-section--dark .fr-h2 { color: #fff; }
+.frp2 .fr-h3 { font-family: 'Bitter', sans-serif; font-size: 20px; color: #192840; margin-bottom: 12px; line-height: 1.2; }
+.frp2 .fr-lead { font-size: 17px; color: #3d5166; line-height: 1.75; margin-bottom: 24px; }
+.frp2 .fr-section--dark .fr-lead { color: rgba(255,255,255,0.72); }
+.frp2 p { margin-bottom: 16px; color: #3d5166; }
+.frp2 .fr-section--dark p { color: rgba(255,255,255,0.68); }
+.frp2 .fr-divider { width: 48px; height: 3px; background: #C9A84C; margin-bottom: 24px; border-radius: 2px; }
+
+/* ── CARDS ── */
+.frp2 .fr-grid { display: grid; gap: 24px; }
+.frp2 .fr-grid--3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.frp2 .fr-card--dark { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 28px 24px; }
+.frp2 .fr-card__icon { width: 44px; height: 44px; background: rgba(201,168,76,0.12); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 20px; }
+
+/* ── CERT BADGES ── */
+.frp2 .fr-certs { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; margin-top: 32px; }
+.frp2 .fr-cert { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 14px 20px; }
+.frp2 .fr-cert__icon { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; flex-shrink: 0; }
+.frp2 .fr-cert__icon--besa { background: rgba(201,168,76,0.2); color: #C9A84C; }
+.frp2 .fr-cert__icon--fgas { background: rgba(76,175,80,0.2); color: #4CAF50; }
+.frp2 .fr-cert__label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.frp2 .fr-cert__value { font-size: 14px; font-weight: 600; color: #fff; }
+
+/* ── STATS ── */
+.frp2 .fr-stats { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 48px; }
+.frp2 .fr-stat { flex: 1; min-width: 140px; text-align: center; padding: 32px 16px; border-right: 1px solid rgba(255,255,255,0.08); }
+.frp2 .fr-stat:last-child { border-right: none; }
+.frp2 .fr-stat__number { font-family: 'Bitter', sans-serif; font-size: 36px; color: #C9A84C; line-height: 1; margin-bottom: 6px; }
+.frp2 .fr-stat__label { font-size: 12px; color: rgba(255,255,255,0.55); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+
+/* ── SCOPE ── */
+.frp2 .fr-scope-block { margin-bottom: 44px; }
+.frp2 .fr-scope-block:last-of-type { margin-bottom: 32px; }
+.frp2 .fr-scope-list { list-style: none; }
+.frp2 .fr-scope-list li { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid #e5eaf0; }
+.frp2 .fr-scope-list li:last-child { border-bottom: none; }
+.frp2 .fr-scope-list li::before { content: '✓'; flex-shrink: 0; width: 22px; height: 22px; background: #C9A84C; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; margin-top: 2px; }
+.frp2 .fr-scope-list li .scope-main { font-size: 15px; font-weight: 600; color: #1b2a3b; display: block; margin-bottom: 4px; }
+.frp2 .fr-scope-list li .scope-detail { font-size: 13px; color: #6b7a8d; display: block; line-height: 1.6; font-weight: 400; }
+
+/* ── INVESTMENT ── */
+.frp2 .fr-investment { background: linear-gradient(135deg, #192840 0%, #1e3050 100%); border-radius: 4px; padding: 52px 48px; text-align: center; position: relative; overflow: hidden; }
+.frp2 .fr-investment::before { content: ''; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(201,168,76,0.1) 0%, transparent 70%); border-radius: 50%; }
+.frp2 .fr-investment__label { font-size: 11px; font-weight: 700; letter-spacing: 3px; color: #C9A84C; text-transform: uppercase; margin-bottom: 16px; position: relative; }
+.frp2 .fr-investment__amount { font-family: 'Bitter', sans-serif; font-size: clamp(52px, 8vw, 80px); color: #fff; line-height: 1; margin-bottom: 8px; position: relative; }
+.frp2 .fr-investment__vat { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 32px; position: relative; }
+.frp2 .fr-investment__includes { list-style: none; display: inline-block; text-align: left; position: relative; }
+.frp2 .fr-investment__includes li { font-size: 14px; color: rgba(255,255,255,0.75); padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; gap: 10px; align-items: flex-start; }
+.frp2 .fr-investment__includes li:last-child { border-bottom: none; }
+.frp2 .fr-investment__includes li::before { content: '✓'; color: #C9A84C; font-weight: 800; flex-shrink: 0; }
+
+/* ── PAYMENT TERMS ── */
+.frp2 .fr-terms { background: #f4f6f8; border-left: 4px solid #C9A84C; padding: 24px 28px; border-radius: 0 4px 4px 0; margin-top: 28px; }
+.frp2 .fr-terms h3 { font-size: 16px; font-weight: 700; color: #1b2a3b; margin-bottom: 16px; }
+.frp2 .fr-terms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+.frp2 .fr-terms-item__label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #C9A84C; text-transform: uppercase; margin-bottom: 4px; }
+.frp2 .fr-terms-item__value { font-weight: 600; color: #1b2a3b; font-size: 14px; }
+
+/* ── STEPS ── */
+.frp2 .fr-step { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.08); align-items: flex-start; }
+.frp2 .fr-step:last-child { border-bottom: none; }
+.frp2 .fr-step__num { flex-shrink: 0; width: 40px; height: 40px; border: 2px solid #C9A84C; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bitter', sans-serif; font-size: 18px; color: #C9A84C; }
+.frp2 .fr-step__content h3 { color: #fff; margin-bottom: 6px; font-size: 16px; font-weight: 700; }
+.frp2 .fr-step__content p { color: rgba(255,255,255,0.65); font-size: 14px; margin: 0; }
+
+/* ── CTA ── */
+.fr-cta { text-align: center; padding: 80px 24px; background: linear-gradient(135deg, #112035 0%, #142238 100%); color: #fff; }
+.fr-cta h2 { font-family: 'Bitter', sans-serif; font-size: clamp(28px, 4vw, 48px); color: #fff; margin-bottom: 16px; }
+.fr-cta p { color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 36px; }
+.fr-btn { display: inline-block; background: #C9A84C; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 16px 36px; border-radius: 2px; text-decoration: none; margin: 0 8px 12px; transition: background 0.2s, transform 0.15s; border: none; cursor: pointer; }
+.fr-btn:hover { background: #b8943f; transform: translateY(-1px); }
+.fr-btn--outline { background: transparent; border: 2px solid rgba(255,255,255,0.4); color: #fff; }
+.fr-btn--outline:hover { border-color: #C9A84C; background: transparent; }
+
+/* ── FOOTER ── */
+.fr-footer { background: #0d1928; padding: 32px 24px; text-align: center; }
+.fr-footer p { color: rgba(255,255,255,0.35); font-size: 12px; margin: 0; }
+.fr-footer__brand { font-family: 'Bitter', sans-serif; font-size: 20px; color: #C9A84C; letter-spacing: 1px; margin-bottom: 8px; }
+
+/* ── NOTE BOX ── */
+.fr-note { background: #fffbf0; border: 1px solid rgba(201,168,76,0.35); border-left: 4px solid #C9A84C; border-radius: 0 4px 4px 0; padding: 20px 24px; margin-top: 28px; }
+.fr-note__label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #C9A84C; margin-bottom: 8px; }
+.fr-note p { font-size: 14px; color: #3d5166; margin: 0 0 8px; }
+.fr-note p:last-child { margin: 0; }
+
+@media (max-width: 600px) {
+  .frp2 .fr-section { padding: 52px 0; }
+  .frp2 .fr-hero { padding: 60px 20px 56px; }
+  .frp2 .fr-investment { padding: 40px 24px; }
+  .frp2 .fr-investment__amount { font-size: 52px; }
+  .frp2 .fr-certs { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ STICKY TOP BAR ══ -->
+<div class="fr-topbar" id="topbar">
+  <div>
+    <div style="font-family:'Bitter',sans-serif;font-size:18px;color:#C9A84C;letter-spacing:1px;font-weight:700;line-height:1.1;">FAN RESCUE</div>
+    <div style="font-size:10px;color:rgba(255,255,255,0.45);letter-spacing:0.5px;margin-top:2px;">Commercial Kitchen Extraction &amp; HVAC Systems · BESA Certified Since 2018</div>
+  </div>
+  <div class="fr-topbar__actions">
+    <button class="fr-topbar__btn fr-topbar__btn--pdf" onclick="downloadPDF()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download PDF
+    </button>
+    <button class="fr-topbar__btn fr-topbar__btn--accept" onclick="acceptQuote()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      Accept Quote
+    </button>
+  </div>
+</div>
+
+<!-- ══ PDF OVERLAY ══ -->
+<div class="fr-pdf-overlay" id="pdfOverlay">
+  <div class="fr-pdf-overlay__msg">
+    <strong>Preparing PDF...</strong>
+    <p>Your browser's print dialog will open. Choose "Save as PDF" to download.</p>
+  </div>
+</div>
+
+<div class="fr-page">
+<div class="frp2">
+
+<!-- ══════════ 1. HERO ══════════ -->
+<div class="fr-hero">
+  <div class="fr-hero__inner">
+    <div class="fr-hero__badge">HVAC &amp; Kitchen Extraction — Installation Quote</div>
+    <div class="fr-hero__label">Prepared exclusively for</div>
+    <h1 class="fr-hero__title">Amma &amp; Atta<br><span>Installation Quote</span></h1>
+    <p class="fr-hero__subtitle">Kitchen extraction system, fresh air supply, and air conditioning — fully scoped, supplied, installed, and commissioned by our in-house team.</p>
+    <div class="fr-hero__meta">
+      <div class="fr-hero__meta-item"><strong>Danny Allen</strong>Amma &amp; Atta</div>
+      <div class="fr-hero__meta-item"><strong>Site</strong>Coleman Street, London</div>
+      <div class="fr-hero__meta-item"><strong>Email</strong><a href="mailto:danny&#64;astriddab.com" style="color:rgba(255,255,255,0.55);">danny&#64;astriddab.com</a></div>
+      <div class="fr-hero__meta-item"><strong>Prepared by</strong>Huzaifa Mulla, Project Designer</div>
+      <div class="fr-hero__meta-item"><strong>Date</strong>14 April 2026</div>
+      <div class="fr-hero__meta-item"><strong>Quote Ref</strong>FR-2026-015 REV A</div>
+      <div class="fr-hero__meta-item"><strong>Valid for</strong>30 days</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 2. INTRODUCTION ══════════ -->
+<div class="fr-section">
+  <div class="fr-container">
+    <div class="fr-section-label">Introduction</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Hi Danny,</h2>
+    <p class="fr-lead">Following our visit to Coleman Street, please find enclosed our quote for the full kitchen extraction and HVAC installation at Amma &amp; Atta. This covers the extraction canopy and high-pressure fan system, fresh air supply, general ventilation, and air conditioning — everything scoped and priced as a single package.</p>
+    <p>All work is carried out by our own engineers from start to finish — no subcontracting, no third parties on site. The price you see is the price you pay, with a clear payment schedule tied to progress on site.</p>
+    <p>Any questions before you're ready to go, give us a call or hit Accept Quote at the top of the page.</p>
+  </div>
+</div>
+
+<!-- ══════════ 3. ABOUT FAN RESCUE ══════════ -->
+<div class="fr-section fr-section--dark">
+  <div class="fr-container">
+    <div class="fr-section-label">About Fan Rescue</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">HVAC &amp; Extraction Installation Specialists</h2>
+    <p class="fr-lead">We've been designing and installing commercial kitchen ventilation systems across London and the South East since 2005. Every job is handled in-house from survey to sign-off.</p>
+    <div class="fr-grid fr-grid--3" style="margin-top:40px;">
+      <div class="fr-card--dark">
+        <div class="fr-card__icon">🔧</div>
+        <h3 style="color:#fff;font-size:16px;margin-bottom:8px;">In-House Engineers</h3>
+        <p style="font-size:14px;">No subcontracting — ever. Our own qualified engineers handle every job from first fix to commissioning. Continuity, accountability, and a team that knows the site.</p>
+      </div>
+      <div class="fr-card--dark">
+        <div class="fr-card__icon">📐</div>
+        <h3 style="color:#fff;font-size:16px;margin-bottom:8px;">Properly Engineered</h3>
+        <p style="font-size:14px;">Every installation is designed to meet Building Regs and manufacturer specifications — not just bolted in. We do this properly so it works long-term and passes inspection.</p>
+      </div>
+      <div class="fr-card--dark">
+        <div class="fr-card__icon">✅</div>
+        <h3 style="color:#fff;font-size:16px;margin-bottom:8px;">Full Handover</h3>
+        <p style="font-size:14px;">We commission every system ourselves, balance the airflows, set the controls, and walk you through it before we leave. Documentation issued on the day.</p>
+      </div>
+    </div>
+    <div class="fr-certs">
+      <div class="fr-cert">
+        <div class="fr-cert__icon fr-cert__icon--besa">B</div>
+        <div>
+          <div class="fr-cert__label">BESA Certified</div>
+          <div class="fr-cert__value">HV020676 · <a href="https://www.thebesa.com/HV020676/" style="color:#C9A84C;font-size:12px;">Verify</a></div>
+        </div>
+      </div>
+      <div class="fr-cert">
+        <div class="fr-cert__icon fr-cert__icon--fgas">F</div>
+        <div>
+          <div class="fr-cert__label">F-Gas Registered</div>
+          <div class="fr-cert__value">FGAS2001890</div>
+        </div>
+      </div>
+      <div class="fr-cert">
+        <div class="fr-cert__icon" style="background:rgba(99,179,237,0.2);color:#63B3ED;">£</div>
+        <div>
+          <div class="fr-cert__label">Public Liability</div>
+          <div class="fr-cert__value">£10 Million Cover</div>
+        </div>
+      </div>
+      <div class="fr-cert">
+        <div class="fr-cert__icon" style="background:rgba(154,117,234,0.2);color:#9A75EA;">PI</div>
+        <div>
+          <div class="fr-cert__label">Professional Indemnity</div>
+          <div class="fr-cert__value">£10 Million Cover</div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-stats">
+      <div class="fr-stat"><div class="fr-stat__number">20+</div><div class="fr-stat__label">Years Trading</div></div>
+      <div class="fr-stat"><div class="fr-stat__number">London</div><div class="fr-stat__label">Based Team</div></div>
+      <div class="fr-stat"><div class="fr-stat__number">0</div><div class="fr-stat__label">Subcontractors</div></div>
+      <div class="fr-stat"><div class="fr-stat__number">Full</div><div class="fr-stat__label">Aftersales Support</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 4. SCOPE OF WORKS ══════════ -->
+<div class="fr-section fr-section--grey">
+  <div class="fr-container">
+    <div class="fr-section-label">What's Included</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Proposed Scope of Works</h2>
+    <p class="fr-lead">Below is the full scope of everything being supplied, installed, and commissioned at Amma &amp; Atta, Coleman Street. All plant is fully consistent with and cross-referenced to the approved drawings <strong>001-1531-01 Rev A</strong> and <strong>001-1531-ES</strong>. This is a complete system — nothing is left out of the price unless stated under Exclusions.</p>
+
+    <!-- EXTRACTION SYSTEM -->
+    <div class="fr-scope-block">
+      <h3 class="fr-h3">Extraction System</h3>
+      <ul class="fr-scope-list">
+        <li>
+          <div>
+            <span class="scope-main">Supply and installation of 304 grade stainless steel extraction canopy hood</span>
+            <span class="scope-detail">304 grade stainless steel extraction canopy, sized and positioned to capture grease-laden air at source. 304 grade is the industry standard for commercial kitchen extraction — corrosion-resistant, easy to clean, and built to last. Fitted with grease filters and designed to comply with BESA DW/172 and TR19 maintenance requirements.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">560 high-pressure Helios fan — ESP Purified 3000, 1 No. UVO 500</span>
+            <span class="scope-detail">High-pressure centrifugal fan selected to match the extraction duty for this kitchen. The Helios ESP Purified 3000 is specified for grease-laden extract applications and includes a UVO 500 electrostatic precipitator unit, providing a high level of grease and odour removal before discharge.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">Standard ductwork, silencer, access panels, reducers, and fittings</span>
+            <span class="scope-detail">All extract ductwork from canopy to fan, fabricated and installed to BESA DW/144 standards. Includes inline silencer to attenuate fan noise, access panels at required intervals for TR19 inspection and cleaning, and all reducers and fittings to complete the run.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">Extract ductwork into existing riser and termination</span>
+            <span class="scope-detail">Extract duct routed into the existing building riser and terminated at the point of discharge. Riser penetrations made good. Both the rear ductwork run and the riser ductwork upgraded to 2-hour fire-rated specification — see below.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">2-hour fire-rated ductwork — rear run and riser</span>
+            <span class="scope-detail">Rear ductwork run and riser ductwork both upgraded to 2-hour fire-rated specification, fabricated and installed to meet building fire compartmentation requirements. Includes all fire-rated access panel fitting kits and associated fittings. Now included in the firm price.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">Dishwasher extract canopy</span>
+            <span class="scope-detail">Supply and installation of a dedicated extract canopy over the dishwasher, sized to capture steam and discharge at the appropriate point. Includes ductwork and fittings.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- FRESH AIR & SUPPLY -->
+    <div class="fr-scope-block">
+      <h3 class="fr-h3">Fresh Air &amp; Supply Ventilation</h3>
+      <ul class="fr-scope-list">
+        <li>
+          <div>
+            <span class="scope-main">500 Helios supply fan — fresh air system with all ductwork, reducers, silencers, fittings, brackets and supports</span>
+            <span class="scope-detail">Helios 500 supply fan to introduce fresh, tempered air into the kitchen to replace extracted air and maintain correct air balance. All associated ductwork, reducers, silencers, support brackets and fittings included in full.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">General fresh air — 250 Ruck fan with all ductwork, fittings, and supports</span>
+            <span class="scope-detail">Secondary fresh air system using a 250 Ruck fan to serve general ventilation requirements in the space. All ductwork, fittings, and structural supports included.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">EHB1 — electric battery heater on fresh air supply</span>
+            <span class="scope-detail">Electric battery heater installed in-line on the fresh air supply to temper incoming air. Position now clarified and priced. Includes supply, installation, electrical connection, controls integration, and commissioning.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- CONTROLS & ELECTRICAL -->
+    <div class="fr-scope-block">
+      <h3 class="fr-h3">Controls &amp; Electrical</h3>
+      <ul class="fr-scope-list">
+        <li>
+          <div>
+            <span class="scope-main">VMS / electrical controls package</span>
+            <span class="scope-detail">Full ventilation management system and electrical controls — fan speed control, interlocks, gas safety shut-off integration, BMS connections where required, and all associated panel works, wiring, and final connections to commission the ventilation system. Now included as a firm line item.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- AIR CONDITIONING -->
+    <div class="fr-scope-block">
+      <h3 class="fr-h3">Air Conditioning</h3>
+      <ul class="fr-scope-list">
+        <li>
+          <div>
+            <span class="scope-main">1 × ducted air conditioning unit — all ductwork, louvres, grilles, and associated works</span>
+            <span class="scope-detail">Supply and installation of a concealed ducted AC unit with full ductwork distribution, louvres, and grilles. Unit sized and positioned to provide effective cooling and heating to the zone. All refrigerant pipework, electrical connections, and commissioning included.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">1 × cassette unit, 10kW — all pipework, fixings, and condenser unit included</span>
+            <span class="scope-detail">Supply and installation of a 10kW ceiling cassette air conditioning unit, complete with outdoor condenser unit. Includes all refrigerant pipework, drain connections, electrical connections, fixings, and full commissioning. F-Gas compliant installation by our registered engineers.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">1 × over-door air heater</span>
+            <span class="scope-detail">Supply and installation of a warm air over-door heater to prevent cold draughts at the entrance. Electrically connected and commissioned as part of this works package.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- COMMISSIONING & HANDOVER -->
+    <div class="fr-scope-block">
+      <h3 class="fr-h3">Commissioning &amp; Handover</h3>
+      <ul class="fr-scope-list">
+        <li>
+          <div>
+            <span class="scope-main">Full system commissioning and airflow balancing</span>
+            <span class="scope-detail">Once installation is complete, we run the full system, verify extraction and supply airflow performance, and set all controls. The system is left working — not just installed.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">Vibration isolation</span>
+            <span class="scope-detail">Isolators and anti-vibration mounts are fitted as standard across all our installations to minimise structure-borne noise and vibration transfer. Specification sheets available on request.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">Commissioning &amp; EMAQ handover documentation</span>
+            <span class="scope-detail">Full commissioning records and EMAQ+ handover documentation provided on completion of installation, in accordance with the EMAQ+ Specifications Guide.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="scope-main">Product data sheets and client walkthrough on handover</span>
+            <span class="scope-detail">Technical data sheets for all installed equipment provided on the day. We walk you through the system before leaving — how to operate it, what to check, and what your TR19 cleaning obligations will be.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- OPTIONAL EXTRAS NOTE -->
+    <div class="fr-note">
+      <div class="fr-note__label">Optional Line Items — Not Included in Firm Price</div>
+      <p><strong>Value-Engineered FOH AC (14kW single split):</strong> £5,300 + VAT. Optional value-engineered front-of-house cooling, available as a single-split alternative if preferred.</p>
+      <p><strong>Basement AC (wall-mounted):</strong> £3,400 + VAT. Optional wall-mounted unit to serve the basement zone.</p>
+      <p><strong>Post-Installation Noise Test (Condition 6b):</strong> £1,500 + VAT. Post-installation noise impact assessment available as a separately priced item if required to discharge Condition 6b.</p>
+      <p><strong>Scaffolding:</strong> Provisional sum £2,000 – £2,500 + VAT, pending survey. Scaffolding is not included in the firm price; if required, it will be confirmed and invoiced separately following survey.</p>
+    </div>
+
+    <div style="background:#fff;border:1px solid #e5eaf0;border-left:4px solid #e0e5ea;padding:20px 24px;border-radius:0 4px 4px 0;margin-top:24px;">
+      <strong style="display:block;margin-bottom:6px;color:#1b2a3b;font-size:14px;">Exclusions</strong>
+      <p style="margin:0;font-size:14px;color:#6b7a8d;">Building works and structural penetrations beyond those described above. Planning permission or licensing. Gas supply works. Fire suppression systems. Electrical connection to incoming supply (by others). Scaffolding (provisional — see note above). Optional items listed above unless confirmed in writing. Any work not listed above.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 5. INVESTMENT + PAYMENT SCHEDULE ══════════ -->
+<div class="fr-section">
+  <div class="fr-container">
+    <div class="fr-section-label">Investment</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Your Investment</h2>
+    <p class="fr-lead">One total price — no hidden extras, no itemised surprises. Everything in the scope above is included.</p>
+
+    <div class="fr-investment" style="margin-top:36px;">
+      <div class="fr-investment__label">Total Installation Price</div>
+      <div class="fr-investment__amount">£82,645</div>
+      <div class="fr-investment__vat">+ VAT at 20% · Total inc. VAT: £99,174</div>
+      <ul class="fr-investment__includes">
+        <li>Kitchen extraction canopy, Helios 560 high-pressure fan &amp; UVO 500</li>
+        <li>Dishwasher extract canopy</li>
+        <li>2-hour fire-rated ductwork — rear run and riser</li>
+        <li>500 fresh air supply fan &amp; 250 Ruck general ventilation fan — all ductwork</li>
+        <li>EHB1 electric battery heater on fresh air supply</li>
+        <li>Ducted AC unit, 10kW cassette unit &amp; over-door air heater</li>
+        <li>VMS / electrical controls package</li>
+        <li>Commissioning, airflow balancing, EMAQ documentation &amp; client handover</li>
+        <li>No subcontracting — Fan Rescue engineers throughout</li>
+      </ul>
+    </div>
+
+    <div class="fr-terms" style="margin-top:32px;">
+      <h3>Payment Schedule</h3>
+      <div class="fr-terms-grid">
+        <div class="fr-terms-item">
+          <div class="fr-terms-item__label">Stage 1 — Deposit (60%)</div>
+          <div class="fr-terms-item__value">£49,587 + VAT · Due on order confirmation</div>
+        </div>
+        <div class="fr-terms-item">
+          <div class="fr-terms-item__label">Stage 2 — Midpoint (30%)</div>
+          <div class="fr-terms-item__value">£24,793.50 + VAT · Due at midpoint of installation</div>
+        </div>
+        <div class="fr-terms-item">
+          <div class="fr-terms-item__label">Stage 3 — Completion (10%)</div>
+          <div class="fr-terms-item__value">£8,264.50 + VAT · Due on practical completion</div>
+        </div>
+        <div class="fr-terms-item">
+          <div class="fr-terms-item__label">Payment Method</div>
+          <div class="fr-terms-item__value">BACS · Sort Code: 20 67 49 · Account: 40180696 · Fan Rescue Limited</div>
+        </div>
+        <div class="fr-terms-item">
+          <div class="fr-terms-item__label">Quote Validity</div>
+          <div class="fr-terms-item__value">30 days from date of issue</div>
+        </div>
+        <div class="fr-terms-item">
+          <div class="fr-terms-item__label">To Accept</div>
+          <div class="fr-terms-item__value">Use the Accept Quote button or email customerservice&#64;fanrescue.co.uk</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#f4f6f8;border-left:4px solid #C9A84C;padding:20px 24px;border-radius:0 4px 4px 0;margin-top:24px;">
+      <p style="margin:0;font-size:14px;color:#3d5166;"><strong style="color:#1b2a3b;">Price Guarantee:</strong> Received a written quote for equivalent scope from another contractor? Send it over and we'll beat it.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 6. GETTING STARTED ══════════ -->
+<div class="fr-section fr-section--dark">
+  <div class="fr-container">
+    <div class="fr-section-label">Getting Started</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">How It Works</h2>
+    <p class="fr-lead">From acceptance to a fully working, commissioned system at Coleman Street.</p>
+    <div style="margin-top:32px;">
+      <div class="fr-step">
+        <div class="fr-step__num">1</div>
+        <div class="fr-step__content">
+          <h3>Accept This Quote</h3>
+          <p>Click Accept Quote at the top of the page or email customerservice&#64;fanrescue.co.uk. We confirm your order and raise the deposit invoice the same day.</p>
+        </div>
+      </div>
+      <div class="fr-step">
+        <div class="fr-step__num">2</div>
+        <div class="fr-step__content">
+          <h3>Deposit — £49,587 + VAT (60%)</h3>
+          <p>Once the deposit clears, equipment is ordered and your installation date is locked in. Lead time is typically 2–3 weeks from order confirmation, subject to supplier availability.</p>
+        </div>
+      </div>
+      <div class="fr-step">
+        <div class="fr-step__num">3</div>
+        <div class="fr-step__content">
+          <h3>Installation on Site — Midpoint Payment £24,793.50 + VAT (30%)</h3>
+          <p>Our engineers complete the full installation. Midpoint payment is due at a point we'll agree in advance before works begin.</p>
+        </div>
+      </div>
+      <div class="fr-step">
+        <div class="fr-step__num">4</div>
+        <div class="fr-step__content">
+          <h3>Commissioning, Handover &amp; Final Payment — £8,264.50 + VAT (10%)</h3>
+          <p>System commissioned, airflows set, controls configured. EMAQ documentation and data sheets issued. We walk you through the system before we leave. Final payment due on practical completion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 7. TERMS & CONDITIONS ══════════ -->
+<div class="fr-section fr-section--grey">
+  <div class="fr-container">
+    <div class="fr-section-label">Terms &amp; Conditions</div>
+    <div class="fr-divider"></div>
+    <h2 class="fr-h2">Terms &amp; Conditions</h2>
+    <div style="margin-top:8px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:24px;">
+        <div style="background:#fff;border:1px solid #e5eaf0;border-radius:4px;padding:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:8px;">Warranty</div>
+          <p style="font-size:14px;color:#3d5166;margin:0;">All labour and parts supplied by us carries a <strong>one-year warranty</strong>; on the AC system, <strong>3 years parts warranty</strong> applies.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5eaf0;border-radius:4px;padding:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:8px;">Additional Works</div>
+          <p style="font-size:14px;color:#3d5166;margin:0;">Any work outside the agreed scope will be priced and confirmed with the client in writing before commencement.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5eaf0;border-radius:4px;padding:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:8px;">Exclusions</div>
+          <p style="font-size:14px;color:#3d5166;margin:0;">This quotation excludes building works, gas supply, scaffolding (provisional pending survey), and electrical works to the building or surrounds unless explicitly stated in the scope. Optional line items are not included in the firm price unless confirmed in writing.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5eaf0;border-radius:4px;padding:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:8px;">Equipment Ownership</div>
+          <p style="font-size:14px;color:#3d5166;margin:0;">All installed equipment remains the property of Fan Rescue Ltd until full payment has been received.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5eaf0;border-radius:4px;padding:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:8px;">Late Payment</div>
+          <p style="font-size:14px;color:#3d5166;margin:0;">Unpaid balances passed to our debt recovery specialists. A charge of <strong>15% + VAT</strong> applied to the outstanding amount, plus statutory interest.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5eaf0;border-radius:4px;padding:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:8px;">Standards</div>
+          <p style="font-size:14px;color:#3d5166;margin:0;">All works in accordance with <strong>F-GAS</strong>, <strong>BESA DW 172/144</strong>, and the <strong>EMAQ+</strong> Specifications Guide.</p>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #e5eaf0;border-radius:4px;padding:24px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:8px;">Commissioning &amp; Handover</div>
+        <p style="font-size:14px;color:#3d5166;margin:0;">The system will not be commissioned or handed over until full and final payment has been received. Works commence only once the quote has been accepted and the 60% deposit received by Fan Rescue Ltd.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 8. CLEANING UPSELL ══════════ -->
+<div class="fr-section">
+  <div class="fr-container">
+    <div style="background: linear-gradient(135deg, #192840 0%, #1e3050 100%); border-radius: 4px; padding: 48px 40px; display:flex; gap:40px; flex-wrap:wrap; align-items:center;">
+      <div style="flex:2;min-width:240px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:10px;">Ongoing Maintenance</div>
+        <h3 style="font-family:'Bitter',sans-serif;font-size:22px;color:#fff;margin-bottom:14px;">Your System Will Need Regular TR19 Cleaning</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.7);margin:0 0 12px;line-height:1.7;">Once installed, your extraction system must be cleaned at TR19-compliant intervals to remain EHO-compliant and keep your insurance valid. Grease build-up in uncleaned ductwork is a fire risk and a compliance failure.</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.7);margin:0;line-height:1.7;">Fan Rescue runs TR19 cleaning contracts across London. We already know your system — let us maintain it. We'll recommend the right cleaning frequency once we've seen how the kitchen runs in operation.</p>
+      </div>
+      <div style="flex:1;min-width:200px;text-align:center;">
+        <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:8px;">Ask us about</div>
+        <div style="font-family:'Bitter',sans-serif;font-size:22px;color:#C9A84C;margin-bottom:4px;">Cleaning Contracts</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:20px;">TR19 · EHO-compliant · Certified</div>
+        <a href="mailto:office&#64;fanrescue.co.uk" style="display:inline-block;background:#C9A84C;color:#192840;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:12px 24px;border-radius:2px;text-decoration:none;">Get a Cleaning Quote</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 9. READY TO PROCEED ══════════ -->
+<div class="fr-cta" id="acceptSection">
+  <h2>Ready to Proceed?</h2>
+  <p>Click Accept to confirm your agreement to the scope, terms, and payment schedule in this quote. We'll be back to you the same day.</p>
+  <button class="fr-btn" onclick="acceptQuote()">Accept This Quote</button>
+  <a href="tel:+442033082936" class="fr-btn fr-btn--outline">Call Us — 020 3308 2936</a>
+  <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:24px;max-width:500px;margin-left:auto;margin-right:auto;">Quote Ref: FR-2026-015 REV A · Valid 30 days from date of issue · BESA HV020676 · F-Gas FGAS2001890</p>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="fr-footer">
+  <div class="fr-footer__brand">FAN RESCUE</div>
+  <p>Fan Rescue Ltd · Ability House, Unit 129, 121 Brooker Road, Waltham Abbey EN9 1JH<br>
+  Tel: 020 3308 2936 · enquiries&#64;fanrescue.co.uk · <a href="https://fanrescue.co.uk" style="color:rgba(255,255,255,0.35);">fanrescue.co.uk</a><br>
+  Co No: 5954579 · VAT No: 906 9111 32 · BESA HV020676 · F-Gas FGAS2001890<br>
+  Quote Ref: FR-2026-015 REV A · Valid 30 days from date of issue. All prices exclude VAT.</p>
+</div>
+
+</div>
+</div>
+
+<script>
+function acceptQuote() {
+  var e = 'customerservice' + '\u0040' + 'fanrescue.co.uk';
+  var s = 'Quote Acceptance \u2014 Amma & Atta \u2014 FR-2026-015 REV A';
+  var b = 'Hi Fan Rescue,\n\nI would like to accept quote FR-2026-015 REV A for the installation at Coleman Street.\n\nPlease send the deposit invoice so we can get started.\n\nThanks,\nDanny\nAmma & Atta';
+  window.location.href = 'mailto:' + e + '?subject=' + encodeURIComponent(s) + '&body=' + encodeURIComponent(b);
+}
+function downloadPDF() {
+  var overlay = document.getElementById('pdfOverlay');
+  overlay.classList.add('active');
+  var topbar = document.getElementById('topbar');
+  topbar.style.display = 'none';
+  setTimeout(function() {
+    overlay.classList.remove('active');
+    window.print();
+    topbar.style.display = '';
+  }, 600);
+}
+document.getElementById('pdfOverlay').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('active');
+});
+</script>
+
+</body>
+</html>
