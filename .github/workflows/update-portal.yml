@@ -1,0 +1,122 @@
+name: Update Portal
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+
+permissions:
+  contents: read
+
+jobs:
+  update-portal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: List changed HTML files
+        id: changed
+        run: |
+          # Files added or modified in this push at the repo root, matching *.html
+          if git rev-parse HEAD~1 >/dev/null 2>&1; then
+            CHANGED=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- '*.html' | grep -v '/' || true)
+          else
+            CHANGED=$(git ls-files -- '*.html' | grep -v '/' || true)
+          fi
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          echo "Files detected:"
+          echo "$CHANGED"
+
+      - name: Stop if nothing changed
+        if: steps.changed.outputs.files == ''
+        run: |
+          echo "No HTML files changed at repo root. Nothing to do."
+          exit 0
+
+      - name: Checkout portal repo
+        if: steps.changed.outputs.files != ''
+        uses: actions/checkout@v4
+        with:
+          repository: FanRescue/fanrescue-portal
+          token: ${{ secrets.PORTAL_UPDATER_TOKEN }}
+          path: portal
+
+      - name: Build & merge portal entries
+        if: steps.changed.outputs.files != ''
+        env:
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
+          HOST: proposals
+        run: |
+          python3 <<'PY'
+          import json, os, re, pathlib, sys
+
+          host = os.environ["HOST"]
+          files = [f.strip() for f in os.environ["CHANGED_FILES"].splitlines() if f.strip()]
+          if not files:
+              print("No files to process.")
+              sys.exit(0)
+
+          portal_json = pathlib.Path("portal/proposals.json")
+          data = json.loads(portal_json.read_text()) if portal_json.exists() else []
+
+          def humanise(slug):
+              # Strip a trailing -FR-YYYY-NNN if present
+              s = re.sub(r'-FR-\d{4}-\d{3}$', '', slug)
+              return " ".join(w.capitalize() for w in s.split("-"))
+
+          def category_from_html(path):
+              try:
+                  txt = pathlib.Path(path).read_text(errors="ignore")
+              except FileNotFoundError:
+                  return "uncategorised"
+              m = re.search(r'<meta\s+name=["\']fr-category["\']\s+content=["\']([^"\']+)["\']', txt, re.I)
+              return m.group(1).strip().lower() if m else "uncategorised"
+
+          def ref_from_filename(filename_no_ext):
+              m = re.search(r'(FR-\d{4}-\d{3})$', filename_no_ext)
+              return m.group(1) if m else ""
+
+          for f in files:
+              filename_no_ext = f[:-5] if f.endswith(".html") else f
+              category = category_from_html(f)
+              ref = ref_from_filename(filename_no_ext)
+              client = humanise(filename_no_ext)
+              entry = {
+                  "ref": ref,
+                  "client": client,
+                  "filename": filename_no_ext,
+                  "host": host,
+                  "category": category,
+              }
+              # Replace if filename already present, else prepend
+              existing_idx = next((i for i, e in enumerate(data) if e.get("filename") == filename_no_ext), None)
+              if existing_idx is not None:
+                  data[existing_idx] = entry
+                  print(f"Updated entry: {filename_no_ext}")
+              else:
+                  data.insert(0, entry)
+                  print(f"Added entry: {filename_no_ext}")
+
+          portal_json.write_text(json.dumps(data, indent=2) + "\n")
+          print(f"Wrote {len(data)} entries to {portal_json}")
+          PY
+
+      - name: Commit & push to portal
+        if: steps.changed.outputs.files != ''
+        run: |
+          cd portal
+          git config user.name "Portal Updater"
+          git config user.email "actions@github.com"
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git add proposals.json
+          git commit -m "Auto-add proposals from fan-rescue-proposals"
+          git push
