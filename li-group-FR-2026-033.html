@@ -581,10 +581,59 @@ p { margin-bottom: 16px; color: var(--fr-slate); }
 <script>
 function acceptQuote() {
   if(window.__frTrack) window.__frTrack('accept');
-  var e = 'customerservice' + '\u0040' + 'fanrescue.co.uk';
+  var to = 'customerservice' + '\u0040' + 'fanrescue.co.uk';
+  var cc = 'huzaifa' + '\u0040' + 'fanrescue.co.uk,office' + '\u0040' + 'fanrescue.co.uk';
   var s = 'Quote Acceptance \u2014 LI Group \u2014 FR-2026-033';
   var b = 'Hi Fan Rescue,\n\nI would like to accept quote FR-2026-033 for the installation at 46 Cranbrook Road, Ilford IG1 4UD.\n\nPlease send the deposit invoice and arrange the next steps so we can get started.\n\nThanks,\nSangeetha\nLI Group';
-  window.location.href = 'mailto:' + e + '?subject=' + encodeURIComponent(s) + '&body=' + encodeURIComponent(b);
+  var mailto = 'mailto:' + to + '?cc=' + encodeURIComponent(cc) + '&subject=' + encodeURIComponent(s) + '&body=' + encodeURIComponent(b);
+  // Robust open: try a real anchor click first (works on iOS/Android/most desktop mail clients),
+  // fall back to a visible accept panel if no mail handler responds within 600ms.
+  var a = document.createElement('a');
+  a.href = mailto;
+  a.rel = 'noopener';
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  var fallbackShown = false;
+  var blurFired = false;
+  window.addEventListener('blur', function onBlur(){ blurFired = true; window.removeEventListener('blur', onBlur); }, { once: true });
+  a.click();
+  setTimeout(function(){
+    a.remove();
+    if (!blurFired && !fallbackShown) {
+      fallbackShown = true;
+      showAcceptFallback(to, cc, s, b);
+    }
+  }, 700);
+}
+function showAcceptFallback(to, cc, subj, body) {
+  var panel = document.getElementById('acceptFallback');
+  if (panel) { panel.classList.add('active'); return; }
+  panel = document.createElement('div');
+  panel.id = 'acceptFallback';
+  panel.style.cssText = 'position:fixed;inset:0;background:rgba(10,22,40,0.85);display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px;';
+  panel.innerHTML = '<div style="background:#fff;max-width:560px;width:100%;border-radius:8px;padding:32px;font-family:inherit;color:#0A1628;">' +
+    '<h3 style="margin:0 0 12px;font-size:22px;">Accept Quote \u2014 FR-2026-033</h3>' +
+    '<p style="margin:0 0 16px;font-size:15px;line-height:1.5;">Your mail client did not open automatically. Copy the details below into a new email, or click the button to try again.</p>' +
+    '<div style="background:#f3f4f6;border-radius:6px;padding:14px;font-size:13px;line-height:1.6;margin-bottom:16px;word-break:break-word;">' +
+      '<div><strong>To:</strong> ' + to + '</div>' +
+      '<div><strong>Cc:</strong> ' + cc + '</div>' +
+      '<div><strong>Subject:</strong> ' + subj + '</div>' +
+      '<div style="margin-top:8px;white-space:pre-wrap;">' + body.replace(/</g,'&lt;') + '</div>' +
+    '</div>' +
+    '<div style="display:flex;gap:10px;flex-wrap:wrap;">' +
+      '<a href="mailto:' + to + '?cc=' + encodeURIComponent(cc) + '&subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body) + '" style="background:#C8973E;color:#0A1628;font-weight:700;padding:12px 20px;border-radius:6px;text-decoration:none;font-size:14px;">Open Email Client</a>' +
+      '<button id="acceptCopyBtn" style="background:#0A1628;color:#fff;font-weight:600;padding:12px 20px;border-radius:6px;border:0;cursor:pointer;font-size:14px;">Copy Email Details</button>' +
+      '<button id="acceptCloseBtn" style="background:transparent;color:#0A1628;font-weight:600;padding:12px 20px;border-radius:6px;border:1px solid #0A1628;cursor:pointer;font-size:14px;">Close</button>' +
+    '</div>' +
+  '</div>';
+  document.body.appendChild(panel);
+  panel.classList.add('active');
+  document.getElementById('acceptCopyBtn').onclick = function(){
+    var text = 'To: ' + to + '\nCc: ' + cc + '\nSubject: ' + subj + '\n\n' + body;
+    if (navigator.clipboard) navigator.clipboard.writeText(text);
+    this.textContent = 'Copied \u2713';
+  };
+  document.getElementById('acceptCloseBtn').onclick = function(){ panel.remove(); };
 }
 function downloadPDF() {
   if(window.__frTrack) window.__frTrack('download');
