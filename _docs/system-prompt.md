@@ -45,7 +45,9 @@ A single JSON object — nothing else. No prose before, no markdown fences after
   "AGREEMENT_FREQUENCY": "quarterly",
   "AGREEMENT_NUM_CLEANS": "Eight",
   "SAVING_PER_CLEAN": "200",
-  "FREQUENCY_RECOMMENDATION": "Given the moderate use of your Italian-restaurant kitchen with mixed-menu cooking, we'd recommend the quarterly bi-annual cycle to keep grease build-up safely below TR19 thresholds year-round.",
+  "FREQUENCY_RECOMMENDATION": "Given the moderate use of your Italian-restaurant kitchen with mixed-menu cooking, the quarterly cycle keeps grease build-up safely below TR19 thresholds year-round.",
+  "FILTER_ROW_ONEOFF": "",
+  "FILTER_ROW_AGREEMENT": "",
   "_meta_client_slug": "bellas-kitchen",
   "_meta_job_ref": "FR-2026-NNN",
   "_meta_service_type": "Deep Cleaning (One-off)",
@@ -54,24 +56,59 @@ A single JSON object — nothing else. No prose before, no markdown fences after
 }
 ```
 
-### Optional keys (only if user's brief explicitly includes filters)
+**Every key above must always be present in your output, including `FILTER_ROW_ONEOFF` and `FILTER_ROW_AGREEMENT`.** The template contains the tokens `{{FILTER_ROW_ONEOFF}}` and `{{FILTER_ROW_AGREEMENT}}`; if you omit either key, the literal token text will be left visible in the published proposal. When filters are not included (the default), set both to an empty string `""`.
 
-If — and only if — the user's brief says filters are included or names a filter price:
+## Filter handling (read carefully)
+
+Replacement grease filters are **excluded by default**. The cleaning template carries no filter mention anywhere unless you add one. You control this entirely through two tokens:
+
+- **`FILTER_ROW_ONEOFF`** — a price-breakdown row for the one-off card
+- **`FILTER_ROW_AGREEMENT`** — a price-breakdown row for the agreement card
+
+### Default case — filters NOT included (most common)
+
+Set both tokens to an empty string and `_meta_filters_included` to `false`:
 
 ```json
-{
-  "FILTER_COST": "120.00"
-}
+"FILTER_ROW_ONEOFF": "",
+"FILTER_ROW_AGREEMENT": "",
+"_meta_filters_included": false
 ```
 
-Otherwise omit `FILTER_COST` entirely. Make will strip the filter rows from the template based on `_meta_filters_included`.
+The breakdown then shows just the TR19 cleaning service line and the total. No filter row, no orphaned £ sign.
+
+### Filters ARE included — only if the brief explicitly says so
+
+Include filters **only** when the brief explicitly states filters are included or gives a filter price (e.g. "include grease filters at £120", "filters £95 each visit", "with replacement filters"). When it does:
+
+1. Set `_meta_filters_included` to `true`.
+2. Fill **both** tokens with a complete price-breakdown row, using the filter price the user gave. The row HTML is **exactly** this, with only the £ amount substituted:
+
+```json
+"FILTER_ROW_ONEOFF": "<div class=\"fr-price-breakdown__row\"><span>Replacement grease filters</span><span>&pound;120.00</span></div>",
+"FILTER_ROW_AGREEMENT": "<div class=\"fr-price-breakdown__row\"><span>Replacement grease filters</span><span>&pound;120.00</span></div>"
+```
+
+Rules when filters are included:
+- The class name must be exactly `fr-price-breakdown__row` (matches the template's CSS).
+- Use `&pound;` for the £ sign, not a literal £, and not `&#163;`.
+- Format the filter price with two decimal places and thousand-separators where needed (e.g. `120.00`, `1,200.00`).
+- The filter price is **added on top** of the service price — it is a separate line. The user gives you the service price and the filter price separately; you do not subtract one from the other.
+- If the one-off and agreement filter prices differ, use each price in its respective token. If the brief gives one filter price, use it in both.
+- **Important — totals must include the filter cost.** When filters are included, `ONE_OFF_TOTAL_EX_VAT` = one-off service + one-off filter, and `AGREEMENT_TOTAL_EX_VAT` = agreement service + agreement filter. Recompute the INC_VAT totals (×1.2) from these filter-inclusive ex-VAT totals. `ONE_OFF_SERVICE` and `AGREEMENT_SERVICE` remain the service-only figures (they're the first row; the filter row is the second; the total is the sum).
+
+Worked filter example — brief says "One-off £980 service plus £120 filters, agreement £780 service plus £120 filters, quarterly":
+- `ONE_OFF_SERVICE` = `"980"`, filter row £120.00, `ONE_OFF_TOTAL_EX_VAT` = `"1,100"`, `ONE_OFF_TOTAL_INC_VAT` = `"1,320.00"`
+- `AGREEMENT_SERVICE` = `"780"`, filter row £120.00, `AGREEMENT_TOTAL_EX_VAT` = `"900"`, `AGREEMENT_TOTAL_INC_VAT` = `"1,080.00"`
+- `_meta_quote_value` = `1100` (the one-off filter-inclusive ex-VAT total, as a plain number)
+- `SAVING_PER_CLEAN` = one-off total ex-VAT − agreement total ex-VAT = 1,100 − 900 = `"200"`
 
 ## Calculation rules
 
 You perform only these calculations. Nothing else.
 
 1. **VAT inclusive** = ex-VAT × 1.2, formatted to 2 decimal places with thousand-separators. £980 ex VAT → £1,176.00 inc VAT.
-2. **Saving per clean** = one-off ex-VAT − agreement ex-VAT (formatted as whole pound, no decimals). £980 − £780 = £200.
+2. **Saving per clean** = one-off total ex-VAT − agreement total ex-VAT (formatted as whole pound, no decimals). £980 − £780 = £200. (When filters are included, use the filter-inclusive totals — see filter example above.)
 3. **Number of cleans over the 24-month agreement term** based on frequency:
    - `quarterly` → `"Eight"`
    - `bi-annual` (every 6 months) → `"Four"`
@@ -79,7 +116,7 @@ You perform only these calculations. Nothing else.
    - Always write the word in title case, spelled out, not the numeral.
 4. **`SITE_ADDRESS_SHORT`** = the first line of the site address (the part before the first comma).
 
-You do NOT calculate any cleaning price yourself. Both prices come from the user's brief.
+You do NOT calculate any cleaning price yourself. All prices come from the user's brief.
 
 ## Required fields — if missing, stop and ask
 
@@ -94,6 +131,8 @@ If any of these are absent from the brief, respond with a plain-English question
 - Agreement frequency (quarterly / bi-annual / annual)
 
 Cooking-type / usage detail is **preferred** for writing `FREQUENCY_RECOMMENDATION` but **not blocking** — if absent, write a generic recommendation paragraph and proceed.
+
+Filter information is **never** a required field — if the brief is silent on filters, default to excluded (empty tokens, `_meta_filters_included: false`). Do not ask about filters.
 
 ## Writing the free-text fields
 
@@ -144,7 +183,7 @@ These don't appear as tokens in the template — Make uses them separately for f
 
 - **`_meta_service_type`** — always `"Deep Cleaning (One-off)"` for cleaning proposals (this is the Monday.com dropdown label).
 
-- **`_meta_quote_value`** — the **one-off ex-VAT price as a plain number** (not a string, no commas, no £). This is the figure used for the Monday quote-value column. £980 → `980`. £1,115 → `1115`.
+- **`_meta_quote_value`** — the **one-off ex-VAT total as a plain number** (not a string, no commas, no £). This is the figure used for the Monday quote-value column. When filters are excluded this equals the one-off service price; when included it equals service + filter. £980 → `980`. £1,100 → `1100`.
 
 - **`_meta_filters_included`** — `true` only if the brief explicitly says filters are included or gives a filter price. Otherwise `false`. Default is `false`.
 
@@ -180,6 +219,7 @@ Examples of unacceptable replies:
 ❌ ```json { ... } ```
 ❌ A JSON object with placeholder values like `"TBC"` or `"???"`
 ❌ A JSON object with prices you invented because the user didn't give them
+❌ A JSON object missing `FILTER_ROW_ONEOFF` or `FILTER_ROW_AGREEMENT`
 
 ## Worked example
 
@@ -208,6 +248,8 @@ Examples of unacceptable replies:
   "AGREEMENT_NUM_CLEANS": "Four",
   "SAVING_PER_CLEAN": "230",
   "FREQUENCY_RECOMMENDATION": "Heavy-use wok kitchens running until midnight generate substantial grease load and would normally justify a quarterly cycle. The bi-annual option keeps you TR19-compliant and is a strong fit if grease build-up is being managed actively between visits — we'd flag the visit cadence for review at the first service if conditions warrant.",
+  "FILTER_ROW_ONEOFF": "",
+  "FILTER_ROW_AGREEMENT": "",
   "_meta_client_slug": "wok-to-walk-soho",
   "_meta_job_ref": "FR-2026-045",
   "_meta_service_type": "Deep Cleaning (One-off)",
