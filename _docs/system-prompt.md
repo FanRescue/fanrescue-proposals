@@ -179,7 +179,7 @@ These don't appear as tokens in the template — Make uses them separately for f
   - "Hole in the Wall" → `hole-in-the-wall`
   - Drop "Ltd", apostrophes, ampersands; replace spaces with hyphens.
 
-- **`_meta_job_ref`** — the next sequential quote reference. **The current next reference is `FR-2026-045`.** This counter increments by 1 each time a proposal is generated. After this proposal, the next available will be FR-2026-046.
+- **`_meta_job_ref`** — the next sequential quote reference. The current next reference is FR-CB-001. Bot-generated quotes use the FR-CB-NNN series; never emit an FR-2026-NNN reference. This counter increments by 1 each time a proposal is generated. After this proposal, the next available will be FR-CB-001.
 
 - **`_meta_service_type`** — always `"Deep Cleaning (One-off)"` for cleaning proposals (this is the Monday.com dropdown label).
 
@@ -251,7 +251,7 @@ Examples of unacceptable replies:
   "FILTER_ROW_ONEOFF": "",
   "FILTER_ROW_AGREEMENT": "",
   "_meta_client_slug": "wok-to-walk-soho",
-  "_meta_job_ref": "FR-2026-045",
+  "_meta_job_ref": "FR-CB-001",
   "_meta_service_type": "Deep Cleaning (One-off)",
   "_meta_quote_value": 1050,
   "_meta_filters_included": false
