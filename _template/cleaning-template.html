@@ -388,7 +388,7 @@ p { margin-bottom: 16px; color: var(--fr-slate); }
           <div class="fr-price-breakdown__row"><span>TR19 cleaning service</span><span>&pound;{{AGREEMENT_SERVICE}}</span></div>{{FILTER_ROW_AGREEMENT}}
           <div class="fr-price-breakdown__row fr-price-breakdown__row--total"><span>Total per service ex VAT</span><span>&pound;{{AGREEMENT_TOTAL_EX_VAT}}</span></div>
         </div>
-        <p style="font-size:13px;color:var(--fr-warm-grey);margin:12px 0 0;">{{AGREEMENT_FREQUENCY}} cleans over a 24-month agreement. Lower per-visit price, continuous compliance.</p>
+        <p style="font-size:13px;color:var(--fr-warm-grey);margin:12px 0 0;">{{AGREEMENT_FREQUENCY}} cleans over a {{TERM_MONTHS}}-month agreement. Lower per-visit price, continuous compliance.</p>
       </div>
     </div>
 
@@ -400,7 +400,7 @@ p { margin-bottom: 16px; color: var(--fr-slate); }
 
     <!-- NUMBER OF CLEANS -->
     <div class="fr-cleans-note">
-      <p style="margin:0;font-size:14px;color:var(--fr-slate);"><strong>Over the 24-month agreement term</strong>, the {{AGREEMENT_FREQUENCY}} schedule covers <strong>{{AGREEMENT_NUM_CLEANS}} cleans</strong> &mdash; each one certified, documented, and carried out by the same in-house team that knows your system.</p>
+      <p style="margin:0;font-size:14px;color:var(--fr-slate);"><strong>Over the {{TERM_MONTHS}}-month agreement term</strong>, the {{AGREEMENT_FREQUENCY}} schedule covers <strong>{{AGREEMENT_NUM_CLEANS}} cleans</strong> &mdash; each one certified, documented, and carried out by the same in-house team that knows your system.</p>
     </div>
 
     <!-- FREQUENCY RECOMMENDATION -->
@@ -418,7 +418,7 @@ p { margin-bottom: 16px; color: var(--fr-slate); }
         </div>
         <div class="fr-terms-item">
           <div class="fr-terms-item__label">Agreement</div>
-          <div class="fr-terms-item__value">&pound;{{AGREEMENT_TOTAL_EX_VAT}} + VAT per service &middot; 24-month term</div>
+          <div class="fr-terms-item__value">&pound;{{AGREEMENT_TOTAL_EX_VAT}} + VAT per service &middot; {{TERM_MONTHS}}-month term</div>
         </div>
         <div class="fr-terms-item">
           <div class="fr-terms-item__label">Payment Method</div>
@@ -476,7 +476,7 @@ p { margin-bottom: 16px; color: var(--fr-slate); }
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:24px;">
         <div style="background:#fff;border:1px solid var(--fr-border);border-radius:var(--fr-radius-md);padding:24px;">
           <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--fr-gold);text-transform:uppercase;margin-bottom:8px;font-family:var(--fr-font-display);">Service Agreement Term</div>
-          <p style="font-size:14px;color:var(--fr-slate);margin:0;">Service agreements run for a minimum term of <strong>24 months</strong>. Early termination is charged at the one-off rate for each remaining scheduled visit within the term.</p>
+          <p style="font-size:14px;color:var(--fr-slate);margin:0;">Service agreements run for a minimum term of <strong>{{TERM_MONTHS}} months</strong>. Early termination is charged at the one-off rate for each remaining scheduled visit within the term.</p>
         </div>
         <div style="background:#fff;border:1px solid var(--fr-border);border-radius:var(--fr-radius-md);padding:24px;">
           <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--fr-gold);text-transform:uppercase;margin-bottom:8px;font-family:var(--fr-font-display);">Access Doors</div>
