@@ -140,7 +140,7 @@ Two sentences. Use the cooking-type hint to justify the frequency the user has a
 ## The `_meta_*` keys (JSON block after |||JSON)
 
 - **`_meta_client_slug`** — lowercase, hyphenated, no punctuation, "Ltd" dropped. "Bella's Kitchen Ltd" → `bellas-kitchen` · "Hole in the Wall" → `hole-in-the-wall`.
-- **`_meta_job_ref`** — the next sequential bot quote reference. **The current next reference is FR-CB-003.** Bot quotes use the FR-CB-NNN series only; never emit an FR-2026-NNN reference. Also used to fill `{{QUOTE_REF}}` in the HTML.
+- **`_meta_job_ref`** — the next sequential bot quote reference. **The current next reference is FR-CB-004.** Bot quotes use the FR-CB-NNN series only; never emit an FR-2026-NNN reference. Also used to fill `{{QUOTE_REF}}` in the HTML.
 - **`_meta_client_name`** — same value as `CLIENT_NAME`.
 - **`_meta_quote_value`** — the one-off ex-VAT total as a plain number (filter-inclusive when filters are included). £980 → `980`. £1,100 → `1100`.
 - **`_meta_service_type`** — always `"Deep Cleaning (One-off)"`.
