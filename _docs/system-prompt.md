@@ -162,6 +162,10 @@ The template carries these as static text — never contradict them in your free
 
 ## Output discipline
 
+Your reply must begin with the literal characters <!DOCTYPE html — no preamble, no reasoning, no commentary, no markdown fence before it. 
+Any thinking happens silently and is never written out. The only exception: if required information is missing, your entire reply is one short
+question and contains no HTML at all.
+
 Your entire reply is either the `HTML|||JSON{...}|||END` block or one short question. Nothing else, ever.
 
 ✅ The complete marker-format block as described.
