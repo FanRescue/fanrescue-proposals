@@ -14,9 +14,9 @@ body { font-family: var(--fr-font-body); color: var(--fr-slate); line-height: 1.
 a { color: var(--fr-gold); text-decoration: none; }
 
 /* ── TOPBAR ── */
-.fr-topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--fr-navy-deep); border-bottom: 2px solid var(--fr-gold); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
-.fr-topbar__brand { display: flex; align-items: center; gap: 12px; }
-.fr-topbar__logo { height: 32px; width: auto; display: block; }
+.fr-topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--fr-navy-deep); border-bottom: 2px solid var(--fr-gold); padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+.fr-topbar__brand { display: flex; align-items: center; gap: 12px; height: 68px; overflow: hidden; }
+.fr-topbar__logo { height: 96px; width: auto; display: block; margin: -19px 0 0 -18px; }
 .fr-topbar__tagline { font-family: var(--fr-font-body); font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: var(--fr-tracking-tagline); text-transform: uppercase; font-weight: 500; }
 .fr-topbar__actions { display: flex; gap: 10px; align-items: center; }
 .fr-topbar__btn { display: inline-flex; align-items: center; gap: 6px; font-family: var(--fr-font-body); font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 8px 18px; border-radius: var(--fr-radius-sm); cursor: pointer; border: none; text-decoration: none; transition: background 0.2s, transform 0.15s; }
@@ -35,7 +35,7 @@ a { color: var(--fr-gold); text-decoration: none; }
 .fr-pdf-overlay__msg strong { color: var(--fr-gold); display: block; margin-bottom: 8px; font-size: 16px; }
 
 /* ── PAGE ── */
-.fr-page { max-width: 960px; margin: 56px auto 0; background: #fff; box-shadow: var(--fr-shadow-card); }
+.fr-page { max-width: 960px; margin: 68px auto 0; background: #fff; box-shadow: var(--fr-shadow-card); }
 
 @media print {
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
@@ -179,6 +179,12 @@ p { margin-bottom: 16px; color: var(--fr-slate); }
   .fr-price-card__amount { font-size: 30px; }
   .fr-certs { flex-direction: column; }
   .fr-topbar__tagline { display: none; }
+  .fr-topbar { padding: 0 14px; }
+  .fr-topbar__brand { flex-shrink: 0; width: 150px; }
+  .fr-topbar__logo { height: 62px; margin: -12px 0 0 -11px; }
+  .fr-topbar__btn { padding: 8px 12px; font-size: 11px; white-space: nowrap; }
+  .fr-topbar__btn--pdf { font-size: 0; padding: 9px 10px; gap: 0; }
+  .fr-topbar__btn--pdf svg { width: 16px; height: 16px; }
 }
 </style>
 </head>
